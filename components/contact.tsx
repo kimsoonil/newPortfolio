@@ -14,7 +14,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">CONTACT</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">CONTACT</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             프로젝트나 협업에 관심이 있으시다면 언제든지 연락주세요.
           </p>
@@ -28,7 +28,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="p-6 rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20 hover:border-indigo-400 dark:hover:border-indigo-600 hover:shadow-lg hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10 transition-all group"
+              className="p-6 rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 bg-linear-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20 hover:border-indigo-400 dark:hover:border-indigo-600 hover:shadow-lg hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10 transition-all group"
             >
               <div className="flex items-center gap-4 mb-2">
                 <Mail className="w-6 h-6 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />

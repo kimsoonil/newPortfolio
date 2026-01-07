@@ -11,7 +11,7 @@ const projects = [
       "어르신들을 위한 특별한 디지털 어시스턴트 서비스. 복잡한 앱 설치나 조작 없이, 간단한 채팅만으로 모든 일을 처리할 수 있습니다. 기차/버스 예매, 병원 진료 예약, 장보기 서비스, 맛집/식당 예약, 행정 업무 지원 등 일상생활에 필요한 모든 서비스를 한 곳에서 이용할 수 있습니다.",
     technologies: ["React", "TypeScript", "AI", "Chat Interface"],
     image: "/hyodo.png",
-    github: "",
+    github: "https://github.com/kimsoonil/hyodoSecretary",
     demo: "https://hyodosecretary.netlify.app/",
   },
   {
