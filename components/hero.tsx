@@ -91,6 +91,17 @@ export default function Hero() {
               Blog
             </motion.a>
             <motion.a
+              href="https://www.notion.so/Soonil-Kim-8b0de4d95bfe40db8e725e980cca5fdb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-indigo-500/30 dark:border-indigo-400/30 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all hover:shadow-md hover:shadow-indigo-500/20"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="text-xl">📝</span>
+              Notion
+            </motion.a>
+            <motion.a
               href="mailto:rlatnsdlf158@naver.com"
               className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-indigo-500/30 dark:border-indigo-400/30 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all hover:shadow-md hover:shadow-indigo-500/20"
               whileHover={{ scale: 1.05 }}

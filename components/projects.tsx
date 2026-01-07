@@ -1,10 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Users, Calendar } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
+  {
+    title: "효도 비서",
+    description:
+      "어르신들을 위한 특별한 디지털 어시스턴트 서비스. 복잡한 앱 설치나 조작 없이, 간단한 채팅만으로 모든 일을 처리할 수 있습니다. 기차/버스 예매, 병원 진료 예약, 장보기 서비스, 맛집/식당 예약, 행정 업무 지원 등 일상생활에 필요한 모든 서비스를 한 곳에서 이용할 수 있습니다.",
+    technologies: ["React", "TypeScript", "AI", "Chat Interface"],
+    image: "/hyodo.png",
+    github: "",
+    demo: "https://hyodosecretary.netlify.app/",
+  },
   {
     title: "민원똑똑",
     description:
@@ -13,19 +22,6 @@ const projects = [
     image: "/minwontalk.png",
     github: "https://github.com/kimsoonil/MinwonTalk",
     demo: "https://minwontalk.netlify.app/",
-    teamSize: 1,
-  },
-  {
-    title: "파츠핏 (PartsFit)",
-    description:
-      "차량 중고부품 이커머스 솔루션. 소유자명과 차량번호만 입력하면 맞춤 부품을 빠르게 찾을 수 있는 서비스입니다. 전용 부품과 호환 부품을 구분하여 제공하며, 다양한 차량 브랜드의 부품을 한 곳에서 구매할 수 있습니다.",
-    technologies: ["카페24", "GA", "SEO", "E-commerce"],
-    image: "/partsfit.png",
-    github: "",
-    demo: "https://partsfit.co.kr/",
-    teamSize: 4,
-    period: "2025.03 ~ 2025.05",
-    role: "GA 작업 및 SEO 최적화, 카페24 쇼핑몰 구축",
   },
 ];
 
@@ -56,42 +52,21 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 overflow-hidden hover:border-indigo-400 dark:hover:border-indigo-600 transition-all bg-background hover:shadow-xl hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10"
             >
-              <div className="relative h-48 bg-gradient-to-br from-indigo-100 via-purple-100 to-cyan-100 dark:from-indigo-950/30 dark:via-purple-950/30 dark:to-cyan-950/30 overflow-hidden group-hover:from-indigo-200 group-hover:via-purple-200 group-hover:to-cyan-200 dark:group-hover:from-indigo-900/40 dark:group-hover:via-purple-900/40 dark:group-hover:to-cyan-900/40 transition-all">
+              <div className="h-48 bg-gradient-to-br from-indigo-100 via-purple-100 to-cyan-100 dark:from-indigo-950/30 dark:via-purple-950/30 dark:to-cyan-950/30 flex items-center justify-center group-hover:from-indigo-200 group-hover:via-purple-200 group-hover:to-cyan-200 dark:group-hover:from-indigo-900/40 dark:group-hover:via-purple-900/40 dark:group-hover:to-cyan-900/40 transition-all relative overflow-hidden">
                 {project.image ? (
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-foreground/40 text-sm">프로젝트 이미지</span>
-                  </div>
+                  <span className="text-foreground/40 text-sm">프로젝트 이미지</span>
                 )}
               </div>
               <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
-                  {project.teamSize && (
-                    <div className="flex items-center gap-1.5 text-sm text-foreground/60">
-                      <Users className="w-4 h-4" />
-                      <span>{project.teamSize}명</span>
-                    </div>
-                  )}
-                </div>
-                {project.period && (
-                  <div className="flex items-center gap-1.5 text-sm text-foreground/60 mb-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{project.period}</span>
-                  </div>
-                )}
-                {project.role && (
-                  <p className="text-sm text-indigo-600 dark:text-indigo-400 mb-3 font-medium">
-                    역할: {project.role}
-                  </p>
-                )}
+                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-foreground/70 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (

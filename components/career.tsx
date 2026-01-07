@@ -3,11 +3,21 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar } from "lucide-react";
 
+/**
+ * 현재 년월을 YYYY.MM 형식으로 반환하는 함수
+ */
+const getCurrentYearMonth = (): string => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  return `${year}.${month}`;
+};
+
 const experiences = [
   {
     company: "어메스 (Ames)",
     position: "프론트엔드 챕터 리더",
-    period: "2019.04 - 2020.11",
+    period: `2023.09~ ${getCurrentYearMonth()}`,
     description: [
       "프론트엔드 챕터 리딩 및 팀의 기술 스택 선정과 코드 컨벤션 주도",
       "주니어 개발자 멘토링 및 페어 프로그래밍을 통한 팀 역량 향상",
