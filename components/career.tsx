@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 /**
  * 현재 년월을 YYYY.MM 형식으로 반환하는 함수
@@ -31,7 +31,7 @@ const experiences = [
   {
     company: "아이디어스 (Ideas)",
     position: "프론트엔드 개발자",
-    period: "2020.12 - 2021.11",
+    period: "2022.04 - 2023.04",
     description: [
       "프론트엔드 개발 및 유지보수",
       "사용자 경험 개선을 위한 UI/UX 개선 작업",
@@ -41,7 +41,7 @@ const experiences = [
   {
     company: "스냅태그 (Snaptag)",
     position: "프론트엔드 개발자",
-    period: "2021.12 - 2022.11",
+    period: "2021.11 - 2022.04",
     description: [
       "프론트엔드 개발 및 유지보수",
       "사용자 경험 개선을 위한 UI/UX 개선 작업",
@@ -51,7 +51,7 @@ const experiences = [
   {
     company: "포지큐브 (Posicube)",
     position: "프론트엔드 개발자",
-    period: "2022.12 - 2023.11",
+    period: "2019.04 - 2020.11",
     description: [
       "AI 장비 관리 시스템 프론트엔드 개발",
       "어드민 콘솔 UI/UX 개발 및 최적화",
