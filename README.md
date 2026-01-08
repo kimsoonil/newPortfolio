@@ -18,6 +18,7 @@
 - ✅ SEO 최적화
 - ✅ 성능 최적화
 - ✅ 접근성 고려
+- ✅ Vitest 기반 단위 테스트
 
 ## 프로젝트 구조
 
@@ -36,8 +37,17 @@ portfolio/
 │   ├── career.tsx      # 경력 섹션
 │   ├── contact.tsx     # 연락처 섹션
 │   └── footer.tsx      # 푸터
-└── lib/
-    └── utils.ts        # 유틸리티 함수
+├── lib/
+│   └── utils.ts        # 유틸리티 함수
+├── test/
+│   ├── setup.ts        # 테스트 환경 설정
+│   ├── utils.test.ts   # 유틸리티 함수 테스트
+│   └── components/     # 컴포넌트 테스트
+│       ├── career.test.tsx
+│       ├── hero.test.tsx
+│       ├── projects.test.tsx
+│       └── skills.test.tsx
+└── vitest.config.ts    # Vitest 설정
 ```
 
 ## 시작하기
@@ -67,6 +77,71 @@ npm run build
 ```bash
 npm start
 ```
+
+## 테스트
+
+이 프로젝트는 [Vitest](https://vitest.dev/)와 [React Testing Library](https://testing-library.com/react)를 사용하여 테스트 코드를 작성했습니다.
+
+### 테스트 실행
+
+```bash
+# 모든 테스트 실행
+npm test
+
+# Watch 모드로 테스트 실행
+npm test -- --watch
+
+# UI 모드로 테스트 실행
+npm run test:ui
+```
+
+### 테스트 커버리지
+
+```bash
+# 커버리지 리포트 생성
+npm run test:coverage
+```
+
+### 테스트 커버리지 현황
+
+현재 프로젝트의 테스트 커버리지는 다음과 같습니다:
+
+#### 유틸리티 함수
+- ✅ `lib/utils.ts` - `cn` 함수 테스트 완료
+  - 클래스 병합 테스트
+  - Tailwind 클래스 충돌 해결 테스트
+  - 조건부 클래스 처리 테스트
+
+#### 컴포넌트 테스트
+- ✅ `components/career.tsx` - 경력 섹션 테스트
+  - 섹션 렌더링 테스트
+  - 경력 데이터 표시 테스트
+  - 날짜 포맷 테스트
+  
+- ✅ `components/hero.tsx` - 히어로 섹션 테스트
+  - 소개 텍스트 렌더링 테스트
+  - 소셜 링크 테스트
+  - 스크롤 기능 테스트
+
+- ✅ `components/projects.tsx` - 프로젝트 섹션 테스트
+  - 프로젝트 목록 렌더링 테스트
+  - GitHub 및 데모 링크 테스트
+  - 기술 스택 표시 테스트
+
+- ✅ `components/skills.tsx` - 스킬 섹션 테스트
+  - 스킬 카테고리 렌더링 테스트
+  - 기술 스택 표시 테스트
+
+### 테스트 작성 가이드
+
+새로운 컴포넌트나 기능을 추가할 때는 다음을 고려하세요:
+
+1. **컴포넌트 렌더링**: 컴포넌트가 올바르게 렌더링되는지 확인
+2. **사용자 인터랙션**: 버튼 클릭, 링크 클릭 등의 상호작용 테스트
+3. **접근성**: ARIA 속성, 시맨틱 HTML 사용 확인
+4. **데이터 표시**: 중요한 데이터가 올바르게 표시되는지 확인
+
+테스트 파일은 `test/` 디렉토리에 작성하며, 컴포넌트 테스트는 `test/components/` 디렉토리에 위치합니다.
 
 ## 커스터마이징
 
