@@ -30,7 +30,8 @@ describe('Career Component', () => {
     render(<Career />);
     
     expect(screen.getByText('프론트엔드 챕터 리더')).toBeInTheDocument();
-    expect(screen.getAllByText('프론트엔드 개발자')).toHaveLength(4);
+    expect(screen.getByText('프론트엔드 개발 팀장')).toBeInTheDocument();
+    expect(screen.getAllByText('프론트엔드 개발자')).toHaveLength(3);
   });
 
   it('경력 기간이 렌더링되어야 한다', () => {

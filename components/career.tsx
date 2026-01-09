@@ -25,16 +25,18 @@ const experiences = [
       "프론트엔드 아키텍처 설계와 성능 최적화를 주도하여 사용자 경험 개선",
       "Cursor 등 AI 도구를 개발 프로세스에 적극 도입하여 생산성 향상",
       "Daily Scrum, 회고 등 체계적인 애자일 문화 정착 및 Jira를 활용한 투명한 업무 관리 시스템 구축",
-      "채용 프로세스 참여 및 기술 인터뷰 진행",
     ],
   },
   {
     company: "아이디어스 (Ideas)",
-    position: "프론트엔드 개발자",
+    position: "프론트엔드 개발 팀장",
     period: "2022.04 - 2023.04",
     description: [
-      "프론트엔드 개발 및 유지보수",
-      "사용자 경험 개선을 위한 UI/UX 개선 작업",
+      "외주 개발 계약 체결 후 현장에서 프로젝트 요구사항 정의 및 외주 계약 협의 후 개발 착수",
+      "프론트엔드 개발팀장으로 첫 진행 및 일정 관리로 계약 성사에 기여",
+      "공통창업 진행내용 및 프론트엔드 개발 전반 관리",
+      "다양한 아이디어 회의 진행 후 프로젝트 개발",
+      "채용 프로세스 참여 및 기술 인터뷰 진행",
       "성능 최적화 및 코드 품질 향상",
     ],
   },
@@ -121,8 +123,8 @@ export default function Career() {
                   <ul className="space-y-2">
                     {experience.description.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-2 text-foreground/70">
-                        <span className="text-foreground mt-1.5">•</span>
-                        <span>{item}</span>
+                        <span className="text-foreground flex-shrink-0 mt-0.5">•</span>
+                        <span className="flex-1">{item}</span>
                       </li>
                     ))}
                   </ul>
