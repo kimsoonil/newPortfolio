@@ -6,14 +6,13 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Global Supply Chain",
+    title: "민원똑똑",
     description:
-      "브라우저 성능 한계를 극복한 고성능 물류/SCM 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
-    technologies: ["React", "TypeScript", "Canvas API", "Zustand", "Performance Optimization"],
-    image: "/gscrmd.png",
-    github: null,
-    demo: "https://gscrmd.netlify.app/",
-    teamSize: 1,
+      "AI를 활용한 대화형 민원 창구 서비스. 자연어 처리 기술을 통해 복잡한 민원 질문에도 정확하게 답변하고, 무설치 간편 인증과 가상 브라우저 보안 기술로 개인정보를 안전하게 보호합니다.",
+    technologies: ["React", "TypeScript", "AI", "Natural Language Processing"],
+    image: "/minwontalk.png",
+    github: "https://github.com/kimsoonil/MinwonTalk",
+    demo: "https://minwontalk.netlify.app/",
   },
   {
     title: "효도 비서",
@@ -25,13 +24,14 @@ const projects = [
     demo: "https://hyodosecretary.netlify.app/",
   },
   {
-    title: "민원똑똑",
+    title: "Global Supply Chain",
     description:
-      "AI를 활용한 대화형 민원 창구 서비스. 자연어 처리 기술을 통해 복잡한 민원 질문에도 정확하게 답변하고, 무설치 간편 인증과 가상 브라우저 보안 기술로 개인정보를 안전하게 보호합니다.",
-    technologies: ["React", "TypeScript", "AI", "Natural Language Processing"],
-    image: "/minwontalk.png",
-    github: "https://github.com/kimsoonil/MinwonTalk",
-    demo: "https://minwontalk.netlify.app/",
+      "브라우저 성능 한계를 극복한 고성능 물류 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
+    technologies: ["React", "TypeScript", "Canvas API", "Zustand", "Performance Optimization"],
+    image: "/gscrmd.png",
+    github: "https://github.com/kimsoonil/gscrmd",
+    demo: "https://gscrmd.netlify.app/",
+    teamSize: 1,
   },
 ];
 
