@@ -6,6 +6,16 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Global Supply Chain",
+    description:
+      "브라우저 성능 한계를 극복한 고성능 물류/SCM 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
+    technologies: ["React", "TypeScript", "Canvas API", "Zustand", "Performance Optimization"],
+    image: "/gscrmd.png",
+    github: null,
+    demo: "https://gscrmd.netlify.app/",
+    teamSize: 1,
+  },
+  {
     title: "효도 비서",
     description:
       "어르신들을 위한 특별한 디지털 어시스턴트 서비스. 복잡한 앱 설치나 조작 없이, 간단한 채팅만으로 모든 일을 처리할 수 있습니다. 기차/버스 예매, 병원 진료 예약, 장보기 서비스, 맛집/식당 예약, 행정 업무 지원 등 일상생활에 필요한 모든 서비스를 한 곳에서 이용할 수 있습니다.",
@@ -66,7 +76,14 @@ export default function Projects() {
                 )}
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-2xl font-semibold">{project.title}</h3>
+                  {project.teamSize && (
+                    <span className="text-xs text-foreground/60 px-2 py-1 rounded bg-foreground/10">
+                      작업인원 {project.teamSize}명
+                    </span>
+                  )}
+                </div>
                 <p className="text-foreground/70 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
