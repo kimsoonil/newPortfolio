@@ -24,7 +24,7 @@ const projects = [
     demo: "https://hyodosecretary.netlify.app/",
   },
   {
-    title: "Global Supply Chain",
+    title: "고성능 물류 데이터 시각화 솔루션(Global Supply Chain)",
     description:
       "브라우저 성능 한계를 극복한 고성능 물류 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
     technologies: ["React", "TypeScript", "Canvas API", "Zustand", "Performance Optimization"],
