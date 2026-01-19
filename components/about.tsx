@@ -37,7 +37,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">ABOUT</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">ABOUT</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             프론트엔드 챕터를 리딩하며 기술 표준 확립과 팀 역량 강화에 집중해온 리더입니다. 
             팀의 기술 스택 선정과 코드 컨벤션을 주도했고, 다양한 개발 문화를 포용하며 
@@ -55,9 +55,9 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20 hover:shadow-lg hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10"
+                className="p-6 rounded-lg border border-primary/20 dark:border-primary/40 hover:border-primary transition-all bg-linear-to-br from-slate-50/50 to-slate-100/50 dark:from-slate-900/20 dark:to-slate-800/20 hover:shadow-lg hover:shadow-primary/10 dark:hover:shadow-primary/5"
               >
-                <Icon className="w-8 h-8 mb-4 text-indigo-600 dark:text-indigo-400" />
+                <Icon className="w-8 h-8 mb-4 text-primary dark:text-primary-light" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-foreground/70">{feature.description}</p>
               </motion.div>

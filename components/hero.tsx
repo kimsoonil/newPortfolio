@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-cyan-50 dark:from-indigo-950/20 dark:via-purple-950/20 dark:to-cyan-950/20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-linear-to-br from-slate-50 via-slate-100 to-slate-50 dark:from-slate-950/20 dark:via-slate-900/20 dark:to-slate-950/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -31,7 +31,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-8 flex justify-center"
             >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-indigo-500/30 dark:border-indigo-400/30 shadow-xl shadow-indigo-500/20 dark:shadow-indigo-400/20">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/30 dark:border-primary-light/30 shadow-xl shadow-primary/20 dark:shadow-primary-light/20">
                 <Image
                   src="/profile.jpg"
                   alt="kimsunil"
@@ -41,7 +41,7 @@ export default function Hero() {
                 />
               </div>
             </motion.div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               kimsunil
             </h1>
             <motion.p
@@ -72,7 +72,7 @@ export default function Hero() {
               href="https://github.com/kimsoonil"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/60"
+              className="flex items-center gap-2 px-6 py-3 rounded-full bg-linear-to-r from-primary to-secondary text-white hover:from-primary-dark hover:to-primary transition-all shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -83,7 +83,7 @@ export default function Hero() {
               href="https://k-soonil.tistory.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-indigo-500/30 dark:border-indigo-400/30 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all hover:shadow-md hover:shadow-indigo-500/20"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary/30 dark:border-primary-light/30 hover:border-primary/50 dark:hover:border-primary-light/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all hover:shadow-md hover:shadow-primary/10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -94,7 +94,7 @@ export default function Hero() {
               href="https://www.notion.so/Soonil-Kim-8b0de4d95bfe40db8e725e980cca5fdb"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-indigo-500/30 dark:border-indigo-400/30 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all hover:shadow-md hover:shadow-indigo-500/20"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary/30 dark:border-primary-light/30 hover:border-primary/50 dark:hover:border-primary-light/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all hover:shadow-md hover:shadow-primary/10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -103,7 +103,7 @@ export default function Hero() {
             </motion.a>
             <motion.a
               href="mailto:rlatnsdlf158@naver.com"
-              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-indigo-500/30 dark:border-indigo-400/30 hover:border-indigo-500/50 dark:hover:border-indigo-400/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all hover:shadow-md hover:shadow-indigo-500/20"
+              className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary/30 dark:border-primary-light/30 hover:border-primary/50 dark:hover:border-primary-light/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all hover:shadow-md hover:shadow-primary/10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

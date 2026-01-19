@@ -37,7 +37,7 @@ export default function Navigation() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg shadow-indigo-500/10"
+          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-lg shadow-primary/10"
           : "bg-transparent"
       }`}
     >
@@ -49,7 +49,7 @@ export default function Navigation() {
               e.preventDefault();
               handleNavClick("#home");
             }}
-            className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent"
+            className="text-xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -66,7 +66,7 @@ export default function Navigation() {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="text-sm font-medium text-foreground/70 hover:text-primary dark:hover:text-primary-light transition-colors"
                 whileHover={{ y: -2 }}
               >
                 {item.name}

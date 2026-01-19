@@ -84,7 +84,7 @@ export default function Career() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">CAREER</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">CAREER</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             다양한 프로젝트와 회사에서의 경험을 소개합니다.
           </p>
@@ -92,7 +92,7 @@ export default function Career() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-cyan-500 hidden md:block" />
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-linear-to-b from-primary via-secondary to-accent hidden md:block" />
 
           <div className="space-y-12">
             {experiences.map((experience, index) => (
@@ -106,10 +106,10 @@ export default function Career() {
               >
                 {/* Timeline dot */}
                 <div className="hidden md:flex items-start pt-2">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 border-4 border-background z-10 shadow-lg shadow-indigo-500/50" />
+                  <div className="w-4 h-4 rounded-full bg-linear-to-br from-primary to-secondary border-4 border-background z-10 shadow-lg shadow-primary/30" />
                 </div>
 
-                <div className="flex-1 p-6 rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 bg-gradient-to-br from-indigo-50/30 to-purple-50/30 dark:from-indigo-950/10 dark:to-purple-950/10 hover:border-indigo-400 dark:hover:border-indigo-600 hover:shadow-lg hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10 transition-all">
+                <div className="flex-1 p-6 rounded-lg border border-primary/20 dark:border-primary/40 bg-linear-to-br from-slate-50/30 to-slate-100/30 dark:from-slate-900/10 dark:to-slate-800/10 hover:border-primary transition-all">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-semibold mb-1">{experience.company}</h3>

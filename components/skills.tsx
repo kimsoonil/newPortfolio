@@ -48,7 +48,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-cyan-50 dark:from-indigo-950/20 dark:via-purple-950/20 dark:to-cyan-950/20">
+    <section id="skills" className="py-20 bg-linear-to-br from-slate-50 via-slate-100 to-slate-50 dark:from-slate-950/20 dark:via-slate-900/20 dark:to-slate-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,13 +58,13 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <svg className="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-primary dark:text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
-            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">SKILLS</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">SKILLS</h2>
           </div>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 mx-auto mb-4"></div>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+          <div className="w-24 h-0.5 bg-linear-to-r from-primary via-secondary to-accent mx-auto mb-4"></div>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             다양한 프로젝트를 통해 쌓아온 기술 역량입니다.
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-indigo-200/50 dark:border-indigo-800/50"
+            className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-primary/20 dark:border-primary/40"
           >
             <div className="space-y-8">
               {skillCategories.map((category, categoryIndex) => (
@@ -96,7 +96,7 @@ export default function Skills() {
                         className="object-contain"
                       />
                     </div>
-                    <h3 className="text-2xl font-bold text-indigo-700 dark:text-indigo-300">{category.category}</h3>
+                    <h3 className="text-2xl font-bold text-primary dark:text-primary-light">{category.category}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (

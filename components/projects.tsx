@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Users } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
@@ -13,6 +13,7 @@ const projects = [
     image: "/minwontalk.png",
     github: "https://github.com/kimsoonil/MinwonTalk",
     demo: "https://minwontalk.netlify.app/",
+    teamSize: 1,
   },
   {
     title: "효도 비서",
@@ -22,9 +23,10 @@ const projects = [
     image: "/hyodo.png",
     github: "https://github.com/kimsoonil/hyodoSecretary",
     demo: "https://hyodosecretary.netlify.app/",
+    teamSize: 1,
   },
   {
-    title: "고성능 물류 데이터 시각화 솔루션(Global Supply Chain)",
+    title: "고성능 물류 데이터 시각화 솔루션\n(Global Supply Chain)",
     description:
       "브라우저 성능 한계를 극복한 고성능 물류 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
     technologies: ["React", "TypeScript", "Canvas API", "Zustand", "Performance Optimization"],
@@ -46,7 +48,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">PROJECTS</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">PROJECTS</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             다양한 도메인에서의 프로젝트 경험을 소개합니다.
           </p>
@@ -60,9 +62,9 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 overflow-hidden hover:border-indigo-400 dark:hover:border-indigo-600 transition-all bg-background hover:shadow-xl hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10"
+              className="group rounded-lg border border-primary/20 dark:border-primary/40 overflow-hidden hover:border-primary transition-all bg-background hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/5"
             >
-              <div className="h-48 bg-gradient-to-br from-indigo-100 via-purple-100 to-cyan-100 dark:from-indigo-950/30 dark:via-purple-950/30 dark:to-cyan-950/30 flex items-center justify-center group-hover:from-indigo-200 group-hover:via-purple-200 group-hover:to-cyan-200 dark:group-hover:from-indigo-900/40 dark:group-hover:via-purple-900/40 dark:group-hover:to-cyan-900/40 transition-all relative overflow-hidden">
+              <div className="h-48 bg-linear-to-br from-slate-100 via-slate-50 to-slate-100 dark:from-slate-900/30 dark:via-slate-800/30 dark:to-slate-900/30 flex items-center justify-center group-hover:from-slate-200 group-hover:via-slate-100 group-hover:to-slate-200 dark:group-hover:from-slate-800/40 dark:group-hover:via-slate-700/40 dark:group-hover:to-slate-800/40 transition-all relative overflow-hidden">
                 {project.image ? (
                   <Image
                     src={project.image}
@@ -76,12 +78,15 @@ export default function Projects() {
                 )}
               </div>
               <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-2xl font-semibold leading-tight whitespace-pre-line">
+                    {project.title}
+                  </h3>
                   {project.teamSize && (
-                    <span className="text-xs text-foreground/60 px-2 py-1 rounded bg-foreground/10">
-                      작업인원 {project.teamSize}명
-                    </span>
+                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                      <Users className="w-3.5 h-3.5" />
+                      <span className="text-xs font-medium">{project.teamSize}명</span>
+                    </div>
                   )}
                 </div>
                 <p className="text-foreground/70 mb-4">{project.description}</p>
@@ -89,7 +94,7 @@ export default function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/30 dark:to-purple-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-700/50"
+                      className="px-3 py-1 text-xs rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light border border-primary/20 dark:border-primary/40"
                     >
                       {tech}
                     </span>
@@ -101,7 +106,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors font-medium"
+                      className="flex items-center gap-2 text-sm text-primary dark:text-primary-light hover:text-primary-dark dark:hover:text-primary transition-colors font-medium"
                       whileHover={{ x: 5 }}
                     >
                       <Github className="w-4 h-4" />
@@ -113,7 +118,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors font-medium"
+                      className="flex items-center gap-2 text-sm text-primary dark:text-primary-light hover:text-primary-dark dark:hover:text-primary transition-colors font-medium"
                       whileHover={{ x: 5 }}
                     >
                       <ExternalLink className="w-4 h-4" />

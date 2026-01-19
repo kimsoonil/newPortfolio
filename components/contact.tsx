@@ -14,7 +14,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-indigo-600 via-purple-600 to-cyan-600 dark:from-indigo-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">CONTACT</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">CONTACT</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             프로젝트나 협업에 관심이 있으시다면 언제든지 연락주세요.
           </p>
@@ -28,13 +28,13 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="p-6 rounded-lg border border-indigo-200/50 dark:border-indigo-800/50 bg-linear-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-950/20 dark:to-purple-950/20 hover:border-indigo-400 dark:hover:border-indigo-600 hover:shadow-lg hover:shadow-indigo-500/20 dark:hover:shadow-indigo-500/10 transition-all group"
+              className="p-6 rounded-lg border border-primary/20 dark:border-primary/40 bg-linear-to-br from-slate-50/50 to-slate-100/50 dark:from-slate-900/20 dark:to-slate-800/20 hover:border-primary transition-all group"
             >
               <div className="flex items-center gap-4 mb-2">
-                <Mail className="w-6 h-6 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />
+                <Mail className="w-6 h-6 text-primary dark:text-primary-light group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-semibold">이메일</h3>
               </div>
-              <p className="text-indigo-700/80 dark:text-indigo-300/80 group-hover:text-indigo-800 dark:group-hover:text-indigo-200 transition-colors">
+              <p className="text-primary/80 dark:text-primary-light/80 group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
                 rlatnsdlf158@naver.com
               </p>
             </motion.a>
@@ -50,10 +50,10 @@ export default function Contact() {
               className="p-6 rounded-lg border border-foreground/10 bg-foreground/5 hover:border-foreground/20 hover:bg-foreground/10 transition-all group"
             >
               <div className="flex items-center gap-4 mb-2">
-                <Github className="w-6 h-6 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />
+                <Github className="w-6 h-6 text-primary dark:text-primary-light group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-semibold">GitHub</h3>
               </div>
-              <p className="text-indigo-700/80 dark:text-indigo-300/80 group-hover:text-indigo-800 dark:group-hover:text-indigo-200 transition-colors">
+              <p className="text-primary/80 dark:text-primary-light/80 group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
                 github.com/kimsoonil
               </p>
             </motion.a>
