@@ -14,7 +14,9 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">CONTACT</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            CONTACT
+          </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             프로젝트나 협업에 관심이 있으시다면 언제든지 연락주세요.
           </p>
