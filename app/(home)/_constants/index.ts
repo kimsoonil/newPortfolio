@@ -191,19 +191,19 @@ export const PROJECTS: Project[] = [
     teamSize: 1,
   },
   {
-    title: "고성능 물류 데이터 시각화 솔루션\n(Global Supply Chain)",
+    title: "펫토리 (Petory)",
     description:
-      "브라우저 성능 한계를 극복한 고성능 물류 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
+      "반려동물과의 따뜻한 일상을 위한 통합 케어 서비스. 스마트 산책 트래킹(경로, 시간, 활동량 기록), 건강 상태 기록 및 자가 진단, 일정 관리 등 반려동물 생애 주기에 맞춘 종합 관리 솔루션을 제공합니다.",
     technologies: [
-      "React",
+      "Next.js",
       "TypeScript",
-      "Canvas API",
-      "Zustand",
-      "Performance Optimization",
+      "Tailwind CSS",
+      "Recharts",
+      "Lucide React",
     ],
-    image: "/gscrmd.png",
-    github: "https://github.com/kimsoonil/gscrmd",
-    demo: "https://gscrmd.netlify.app/",
+    image: "/petory.png",
+    github: "https://github.com/kimsoonil/Petory",
+    demo: "https://petory.netlify.app/",
     teamSize: 1,
   },
   {
