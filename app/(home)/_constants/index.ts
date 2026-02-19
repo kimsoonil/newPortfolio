@@ -1,5 +1,11 @@
 import { Code, Users, Zap, Target } from "lucide-react";
-import { Project, Experience, SkillCategory, Feature, NavItem } from "@/app/(home)/_types";
+import {
+  Project,
+  Experience,
+  SkillCategory,
+  Feature,
+  NavItem,
+} from "@/app/(home)/_types";
 
 /**
  * 네비게이션 아이템 상수
@@ -24,17 +30,20 @@ export const FEATURES: Feature[] = [
   {
     icon: Zap,
     title: "AI 도구 활용",
-    description: "Cursor 등 AI 도구를 개발 프로세스에 적극 도입하여 생산성 향상",
+    description:
+      "Cursor 등 AI 도구를 개발 프로세스에 적극 도입하여 생산성 향상",
   },
   {
     icon: Users,
     title: "멘토링 & 리더십",
-    description: "주니어 개발자들의 멘토링과 페어 프로그래밍을 통한 팀 역량 향상",
+    description:
+      "주니어 개발자들의 멘토링과 페어 프로그래밍을 통한 팀 역량 향상",
   },
   {
     icon: Target,
     title: "테스트 문화",
-    description: "VITest와 React Testing Library 기반의 테스트 코드 작성 문화 정착",
+    description:
+      "VITest와 React Testing Library 기반의 테스트 코드 작성 문화 정착",
   },
 ];
 
@@ -185,11 +194,32 @@ export const PROJECTS: Project[] = [
     title: "고성능 물류 데이터 시각화 솔루션\n(Global Supply Chain)",
     description:
       "브라우저 성능 한계를 극복한 고성능 물류 데이터 시각화 솔루션. React의 선언적 렌더링과 Canvas API를 결합한 하이브리드 구조로 10,000개 이상의 실시간 물류 노드를 60FPS로 안정적으로 렌더링합니다. 비동기 청크 처리와 Zustand 선택적 구독을 통해 대용량 데이터 처리 시에도 UI 스레드 블로킹을 방지합니다.",
-    technologies: ["React", "TypeScript", "Canvas API", "Zustand", "Performance Optimization"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Canvas API",
+      "Zustand",
+      "Performance Optimization",
+    ],
     image: "/gscrmd.png",
     github: "https://github.com/kimsoonil/gscrmd",
     demo: "https://gscrmd.netlify.app/",
     teamSize: 1,
   },
+  {
+    title: "가방똑똑 (BagKnock)",
+    description:
+      "학부모를 위한 통합 학교 정보 관리 서비스. 교육부 나이스(NEIS) Open API를 활용하여 여러 자녀의 알림장, 급식, 시간표를 한곳에서 확인하고, 알림장에서 준비물을 자동으로 추출하여 체크리스트를 생성해주는 학부모 맞춤형 솔루션입니다.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "NEIS Open API",
+    ],
+    image: "/bagknock.png",
+    github: "https://github.com/kimsoonil/BagKnock",
+    demo: "https://bagknock.netlify.app/",
+    teamSize: 1,
+  },
 ];
-
