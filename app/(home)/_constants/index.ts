@@ -185,7 +185,7 @@ export const PROJECTS: Project[] = [
   {
     title: "민원똑똑",
     description:
-      "복잡한 공공 행정 정보를 AI 자연어 처리(NLP)로 즉시 응답하는 서비스입니다. 기존의 복잡한 검색 방식 대신 대화형 인터페이스를 통해 정보 접근성을 개선하고, 가상 브라우저 보안 기술로 개인정보 노출 위험을 제로화했습니다.",
+      "정부 민원 사이트의 복잡한 검색 UI를 개선하는 아이디어 프로젝트입니다. 실제 크롤링 대신 더미 데이터로 AI 자연어 처리 기반 대화형 민원 응답 흐름을 구현하고 UX 개선 방향을 검증했습니다.",
     technologies: ["React", "TypeScript", "AI", "Natural Language Processing"],
     image: "/minwontalk.png",
     github: "https://github.com/kimsoonil/MinwonTalk",
@@ -195,7 +195,7 @@ export const PROJECTS: Project[] = [
   {
     title: "효도 비서",
     description:
-      "디지털 취약계층인 중장년층을 위한 AI 대시보드 서비스입니다. 복잡한 UI 대신 채팅 인터페이스와 음성 인식을 활용하여 기차 예매, 병원 예약 등 실생활 필수 업무를 자동화함으로써 사용자 이탈률을 획기적으로 낮췄습니다.",
+      "디지털 취약계층이 겪는 복잡한 예약 및 행정 서비스의 불편함을 해결하는 아이디어 프로젝트입니다. 채팅 인터페이스와 더미 데이터를 통해 기차 예매, 병원 예약 등의 핵심 프로세스를 단순화한 UX 모델을 구현했습니다.",
     technologies: ["React", "TypeScript", "AI", "Chat Interface"],
     image: "/hyodo.png",
     github: "https://github.com/kimsoonil/hyodoSecretary",
@@ -205,7 +205,7 @@ export const PROJECTS: Project[] = [
   {
     title: "펫토리 (Petory)",
     description:
-      "반려동물 생동 데이터 시각화 라이프 케어 솔루션입니다. Recharts를 활용하여 산책량, 식사량 등 방대한 데이터를 직관적인 그래프로 제공하며, 사용자 경험 중심의 UI/UX 설계로 일간 활성 사용자(DAU) 성장을 경험했습니다.",
+      "파편화된 반려동물 건강 및 산책 정보를 한눈에 관리하고자 하는 아이디어 프로젝트입니다. 더미 데이터를 활용해 활동량 시각화 대시보드와 생애 주기별 케어 프로세스를 구현하여 통합 관리 솔루션의 가능성을 보여줍니다.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -221,7 +221,7 @@ export const PROJECTS: Project[] = [
   {
     title: "가방똑똑 (BagKnock)",
     description:
-      "NEIS Open API 기반 초등 학부모 정보 자동화 솔루션입니다. 여러 명의 자녀 정보를 수집하여 알림장 핵심 키워드(준비물, 숙제)를 AI로 추출하고 자동화된 리마인더를 제공함으로써 학부모 업무 효율을 2배 이상 개선했습니다.",
+      "학교 알림장·급식·시간표가 분산된 학부모의 불편함을 해결하는 아이디어 프로젝트입니다. NEIS Open API와 더미 데이터를 활용해 여러 자녀 정보 통합 및 준비물 자동 추출 기능의 동작 방식을 구현했습니다.",
     technologies: [
       "Next.js",
       "TypeScript",
