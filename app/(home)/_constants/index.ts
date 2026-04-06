@@ -30,20 +30,17 @@ export const FEATURES: Feature[] = [
   {
     icon: Zap,
     title: "AI 도구 활용",
-    description:
-      "Cursor 등 AI 도구를 적극 도입하여 개발 생산성 2배 이상 향상",
+    description: "Cursor AI 도입으로 주간 티켓 처리량 35% 증가, 코드 리뷰 루프 50% 단축",
   },
   {
     icon: Users,
     title: "멘토링 & 리더십",
-    description:
-      "주니어 개발자 성장을 지원하며 팀 역량 30% 향상 및 협업 강화",
+    description: "주니어 멘토링·페어 프로그래밍 주도 및 채용 기술 인터뷰 10건 이상 진행",
   },
   {
     icon: Target,
     title: "테스트 문화",
-    description:
-      "VITest 기반 테스트 코드로 버그 발생률 40% 감소 및 코드 안정성 확보",
+    description: "Vitest·RTL 기반 단위·통합 테스트 도입으로 기능 개발 단계 회귀 오류 방지 체계 구축",
   },
 ];
 
@@ -91,9 +88,11 @@ export const EXPERIENCES: Experience[] = [
     position: "프론트엔드 개발자",
     period: "2021.11 - 2022.04",
     description: [
-      "프론트엔드 개발 및 유지보수",
-      "사용자 경험 개선을 위한 UI/UX 개선 작업",
-      "성능 최적화 및 코드 품질 향상",
+      "PDF 업로드 후 드래그·사이즈조절·선택 도구로 영역 지정하는 스냅태그 적용 웹 프로그램 개발",
+      "react-konva·zwibbler·react-cropper 라이브러리 비교·테스트 후 최적 솔루션 선정 적용",
+      "편집 도구 성능·렌더링 속도 개선으로 사용자 조작성 향상",
+      "Redux-saga 기반 비동기 처리 구조 개선으로 안정성 강화",
+      "NFT 실시간 거래 플랫폼(랩툰) 데이터 시각화 UI 및 실시간 차트 반응성 강화",
     ],
   },
   {
@@ -101,9 +100,11 @@ export const EXPERIENCES: Experience[] = [
     position: "프론트엔드 개발자",
     period: "2019.04 - 2020.11",
     description: [
-      "AI 장비 관리 시스템 프론트엔드 개발",
-      "어드민 콘솔 UI/UX 개발 및 최적화",
-      "AI 훈련 기능 관련 프론트엔드 개발",
+      "기존 'AI 정보 단순 조회'만 가능하던 콘솔에서 AI 훈련·에러 로그·기기 정보 관리 기능까지 확장",
+      "클라이언트 단에서 AI 훈련 수행 가능하도록 UI/UX 재구성, 운영 효율 향상",
+      "온라인·전화 예약 통합 관리 서비스(로비스토어) 개발 — 애자일 기반 스프린트, 요구사항 정의부터 리팩토링까지 참여",
+      "Electron 기반 클라이언트 앱 배포 경험",
+      "Flutter/MobX 기반 미국 주식 실시간 정보 앱(따박따박) 개발 — SNS 5종 로그인, 실시간 차트 구현",
     ],
   },
   {
