@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github } from "lucide-react";
+import { Mail, Github, BookOpen } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -22,8 +22,8 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.a
               href="mailto:rlatnsdlf158@naver.com"
               initial={{ opacity: 0, y: 20 }}
@@ -57,6 +57,25 @@ export default function Contact() {
               </div>
               <p className="text-primary/80 dark:text-primary-light/80 group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
                 github.com/kimsoonil
+              </p>
+            </motion.a>
+
+            <motion.a
+              href="https://k-soonil.tistory.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="p-6 rounded-lg border border-primary/20 dark:border-primary/40 bg-linear-to-br from-slate-50/50 to-slate-100/50 dark:from-slate-900/20 dark:to-slate-800/20 hover:border-primary transition-all group"
+            >
+              <div className="flex items-center gap-4 mb-2">
+                <BookOpen className="w-6 h-6 text-primary dark:text-primary-light group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-semibold">Blog</h3>
+              </div>
+              <p className="text-primary/80 dark:text-primary-light/80 group-hover:text-primary-dark dark:group-hover:text-primary transition-colors">
+                k-soonil.tistory.com
               </p>
             </motion.a>
           </div>

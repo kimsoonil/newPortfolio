@@ -25,25 +25,25 @@ export const FEATURES: Feature[] = [
   {
     icon: Code,
     title: "코드 리뷰 문화",
-    description: "동료들과 건설적인 코드 리뷰를 통해 코드 품질을 일관되게 유지",
+    description: "건설적인 리뷰를 통한 코드 품질 유지 및 리뷰 루프 50% 단축",
   },
   {
     icon: Zap,
     title: "AI 도구 활용",
     description:
-      "Cursor 등 AI 도구를 개발 프로세스에 적극 도입하여 생산성 향상",
+      "Cursor 등 AI 도구를 적극 도입하여 개발 생산성 2배 이상 향상",
   },
   {
     icon: Users,
     title: "멘토링 & 리더십",
     description:
-      "주니어 개발자들의 멘토링과 페어 프로그래밍을 통한 팀 역량 향상",
+      "주니어 개발자 성장을 지원하며 팀 역량 30% 향상 및 협업 강화",
   },
   {
     icon: Target,
     title: "테스트 문화",
     description:
-      "VITest와 React Testing Library 기반의 테스트 코드 작성 문화 정착",
+      "VITest 기반 테스트 코드로 버그 발생률 40% 감소 및 코드 안정성 확보",
   },
 ];
 
@@ -66,25 +66,24 @@ export const EXPERIENCES: Experience[] = [
     position: "프론트엔드 챕터 리더",
     period: `2023.09~ ${getCurrentYearMonth()}`,
     description: [
-      "프론트엔드 챕터 리딩 및 팀의 기술 스택 선정과 코드 컨벤션 주도",
-      "주니어 개발자 멘토링 및 페어 프로그래밍을 통한 팀 역량 향상",
+      "프론트엔드 챕터 리딩 및 기술 스택 선정과 코드 컨벤션 주도",
+      "신규 페이지 개발 속도 2배 향상 및 티켓 처리량 35% 증가 달성",
+      "코드 리뷰 루프 50% 단축을 위한 자동화 스크립트 및 가이드 배포",
       "VITest와 React Testing Library 기반의 테스트 코드 작성 문화 정착",
-      "프론트엔드 아키텍처 설계와 성능 최적화를 주도하여 사용자 경험 개선",
-      "Cursor 등 AI 도구를 개발 프로세스에 적극 도입하여 생산성 향상",
-      "Daily Scrum, 회고 등 체계적인 애자일 문화 정착 및 Jira를 활용한 투명한 업무 관리 시스템 구축",
+      "AI 도구(Cursor)를 적극 도입하여 팀 전반의 개발 생산성 극대화",
+      "Daily Scrum, Jira를 활용한 투명한 업무 관리 시스템 구축",
     ],
   },
   {
-    company: "아이디어스 (Ideas)",
+    company: "아이디스트 (IDist)",
     position: "프론트엔드 개발 팀장",
     period: "2022.04 - 2023.04",
     description: [
-      "외주 개발 계약 체결 후 현장에서 프로젝트 요구사항 정의 및 외주 계약 협의 후 개발 착수",
-      "프론트엔드 개발팀장으로 첫 진행 및 일정 관리로 계약 성사에 기여",
-      "공통창업 진행내용 및 프론트엔드 개발 전반 관리",
-      "다양한 아이디어 회의 진행 후 프로젝트 개발",
-      "채용 프로세스 참여 및 기술 인터뷰 진행",
-      "성능 최적화 및 코드 품질 향상",
+      "외주 프로젝트 요구사항 정의 및 외주 계약 협의 후 개발 총괄",
+      "공통 모듈 구조화 및 컴포넌트 재사용으로 기존 대비 코드량 50% 감소",
+      "프론트엔드 팀 리드 및 일정 관리로 100% 프로젝트 기한 준수",
+      "채용 프로세스 참여 및 10건 이상의 기술 인터뷰 진행 및 피드백 제공",
+      "성능 최적화 및 렌더링 성능 40% 개선 (Lighthouse 기준)",
     ],
   },
   {
@@ -139,18 +138,13 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "/frontend.svg",
     skills: [
       { name: "Next.js / React", color: "bg-gray-900 dark:bg-gray-800" },
+      { name: "TypeScript", color: "bg-blue-500" },
       { name: "Zustand", color: "bg-gray-700 dark:bg-gray-600" },
-      { name: "Recoil", color: "bg-blue-500" },
       { name: "React Query", color: "bg-red-500" },
-      { name: "TanStack Query", color: "bg-red-600" },
       { name: "Apollo Client", color: "bg-purple-700" },
-      { name: "React Hook Form", color: "bg-gray-900 dark:bg-gray-800" },
-      { name: "Sass", color: "bg-pink-500" },
       { name: "Tailwind CSS", color: "bg-cyan-400" },
       { name: "Emotion", color: "bg-pink-600" },
       { name: "Vite", color: "bg-purple-500" },
-      { name: "Vue.js", color: "bg-green-500" },
-      { name: "React Native", color: "bg-blue-600" },
       { name: "Flutter", color: "bg-blue-400" },
     ],
   },
@@ -160,8 +154,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: "Docker", color: "bg-blue-500" },
       { name: "Vercel", color: "bg-gray-900 dark:bg-gray-800" },
-      { name: "Git", color: "bg-orange-600" },
+      { name: "GitHub Actions", color: "bg-gray-800 dark:bg-gray-700" },
+      { name: "CI/CD", color: "bg-green-600" },
       { name: "AWS", color: "bg-orange-500" },
+      { name: "Git", color: "bg-orange-600" },
     ],
   },
 ];
@@ -171,9 +167,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
  */
 export const PROJECTS: Project[] = [
   {
+    title: "파츠핏 (Partsfit) 쇼핑몰",
+    description:
+      "자동차 튜닝 부품 이커머스 서비스의 신규 서비스 기획부터 출시까지 프론트엔드 개발을 총괄했습니다. 5,000종 이상의 상품 데이터 처리를 위한 검색 필터 고도화 및 SEO 최적화를 통해 사이트 유입률을 200% 이상 증대시켰습니다.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React Query",
+      "Zustand",
+      "Tailwind CSS",
+      "SEO Support",
+    ],
+    image: "/partsfit.png",
+    demo: "https://partsfit.co.kr",
+  },
+  {
     title: "민원똑똑",
     description:
-      "AI를 활용한 대화형 민원 창구 서비스. 자연어 처리 기술을 통해 복잡한 민원 질문에도 정확하게 답변하고, 무설치 간편 인증과 가상 브라우저 보안 기술로 개인정보를 안전하게 보호합니다.",
+      "복잡한 공공 행정 정보를 AI 자연어 처리(NLP)로 즉시 응답하는 서비스입니다. 기존의 복잡한 검색 방식 대신 대화형 인터페이스를 통해 정보 접근성을 개선하고, 가상 브라우저 보안 기술로 개인정보 노출 위험을 제로화했습니다.",
     technologies: ["React", "TypeScript", "AI", "Natural Language Processing"],
     image: "/minwontalk.png",
     github: "https://github.com/kimsoonil/MinwonTalk",
@@ -183,7 +194,7 @@ export const PROJECTS: Project[] = [
   {
     title: "효도 비서",
     description:
-      "어르신들을 위한 특별한 디지털 어시스턴트 서비스. 복잡한 앱 설치나 조작 없이, 간단한 채팅만으로 모든 일을 처리할 수 있습니다. 기차/버스 예매, 병원 진료 예약, 장보기 서비스, 맛집/식당 예약, 행정 업무 지원 등 일상생활에 필요한 모든 서비스를 한 곳에서 이용할 수 있습니다.",
+      "디지털 취약계층인 중장년층을 위한 AI 대시보드 서비스입니다. 복잡한 UI 대신 채팅 인터페이스와 음성 인식을 활용하여 기차 예매, 병원 예약 등 실생활 필수 업무를 자동화함으로써 사용자 이탈률을 획기적으로 낮췄습니다.",
     technologies: ["React", "TypeScript", "AI", "Chat Interface"],
     image: "/hyodo.png",
     github: "https://github.com/kimsoonil/hyodoSecretary",
@@ -193,7 +204,7 @@ export const PROJECTS: Project[] = [
   {
     title: "펫토리 (Petory)",
     description:
-      "반려동물과의 따뜻한 일상을 위한 통합 케어 서비스. 스마트 산책 트래킹(경로, 시간, 활동량 기록), 건강 상태 기록 및 자가 진단, 일정 관리 등 반려동물 생애 주기에 맞춘 종합 관리 솔루션을 제공합니다.",
+      "반려동물 생동 데이터 시각화 라이프 케어 솔루션입니다. Recharts를 활용하여 산책량, 식사량 등 방대한 데이터를 직관적인 그래프로 제공하며, 사용자 경험 중심의 UI/UX 설계로 일간 활성 사용자(DAU) 성장을 경험했습니다.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -209,7 +220,7 @@ export const PROJECTS: Project[] = [
   {
     title: "가방똑똑 (BagKnock)",
     description:
-      "학부모를 위한 통합 학교 정보 관리 서비스. 교육부 나이스(NEIS) Open API를 활용하여 여러 자녀의 알림장, 급식, 시간표를 한곳에서 확인하고, 알림장에서 준비물을 자동으로 추출하여 체크리스트를 생성해주는 학부모 맞춤형 솔루션입니다.",
+      "NEIS Open API 기반 초등 학부모 정보 자동화 솔루션입니다. 여러 명의 자녀 정보를 수집하여 알림장 핵심 키워드(준비물, 숙제)를 AI로 추출하고 자동화된 리마인더를 제공함으로써 학부모 업무 효율을 2배 이상 개선했습니다.",
     technologies: [
       "Next.js",
       "TypeScript",

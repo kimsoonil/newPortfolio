@@ -50,7 +50,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl text-foreground/70 mb-4 max-w-2xl mx-auto"
             >
-              프론트엔드 리더십 및 기술 혁신을 주도하는 개발자
+              6년 8개월간 10개 이상의 서비스를 출시한 프론트엔드 개발자
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg text-foreground/60 mb-8 max-w-2xl mx-auto"
             >
-              프론트엔드 챕터를 리딩하며 기술 표준 확립과 팀 역량 강화에 집중합니다.
+              커머스, AI, 핀테크 등 6개 도메인을 경험하며 팀의 기술 표준 확립과 생산성 혁신을 주도합니다.
             </motion.p>
           </motion.div>
 
