@@ -1,106 +1,38 @@
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import Projects from '@/components/projects';
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
+import Projects from "@/app/(home)/_components/Projects";
 
-describe('Projects Component', () => {
-  it('프로젝트 섹션 제목이 렌더링되어야 한다', () => {
+describe("Projects", () => {
+  it("최근 실무 프로젝트를 우선해 렌더링한다", () => {
     render(<Projects />);
-    expect(screen.getByText('PROJECTS')).toBeInTheDocument();
+
+    expect(screen.getByText("PROJECTS")).toBeInTheDocument();
+    expect(
+      screen.getByText("최근 업무와 지원 직무에 직접 연결되는 프로젝트를 선별했습니다."),
+    ).toBeInTheDocument();
+    expect(screen.getByText("파츠핏몰")).toBeInTheDocument();
+    expect(screen.getByText("B2B 커머스")).toBeInTheDocument();
+    expect(screen.getByText("SCM")).toBeInTheDocument();
+    expect(screen.getByText("어드민 React 전환·PV 시각화")).toBeInTheDocument();
+    expect(screen.getByText("슈퍼클럽")).toBeInTheDocument();
   });
 
-  it('프로젝트 설명이 렌더링되어야 한다', () => {
+  it("프로젝트 기간, 역할, 수행 내용을 보여준다", () => {
     render(<Projects />);
+
+    expect(screen.getByText("2026.01 - 2026.07")).toBeInTheDocument();
+    expect(screen.getByText("자사몰·모바일 웹뷰 프론트엔드 개발")).toBeInTheDocument();
     expect(
-      screen.getByText('다양한 도메인에서의 프로젝트 경험을 소개합니다.')
+      screen.getByText("소셜 로그인, 상품, 장바구니, 주문, 배송과 차량 관리 화면 구현"),
     ).toBeInTheDocument();
   });
 
-  it('모든 프로젝트가 렌더링되어야 한다', () => {
+  it("파츠핏 데모 링크를 안전한 외부 링크로 제공한다", () => {
     render(<Projects />);
-    
-    expect(screen.getByText('효도 비서')).toBeInTheDocument();
-    expect(screen.getByText('민원똑똑')).toBeInTheDocument();
-  });
 
-  it('프로젝트 설명이 렌더링되어야 한다', () => {
-    render(<Projects />);
-    
-    expect(
-      screen.getByText(/어르신들을 위한 특별한 디지털 어시스턴트/)
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(/AI를 활용한 대화형 민원 창구 서비스/)
-    ).toBeInTheDocument();
-  });
-
-  it('프로젝트 기술 스택이 렌더링되어야 한다', () => {
-    render(<Projects />);
-    
-    // 모든 기술 스택이 여러 프로젝트에 나타날 수 있으므로 getAllByText 사용
-    const reactElements = screen.getAllByText('React');
-    expect(reactElements.length).toBeGreaterThan(0);
-    
-    const typescriptElements = screen.getAllByText('TypeScript');
-    expect(typescriptElements.length).toBeGreaterThan(0);
-    
-    const aiElements = screen.getAllByText('AI');
-    expect(aiElements.length).toBeGreaterThan(0);
-    
-    // Chat Interface 확인
-    expect(screen.getByText('Chat Interface')).toBeInTheDocument();
-    
-    // Natural Language Processing 확인
-    expect(screen.getByText('Natural Language Processing')).toBeInTheDocument();
-  });
-
-  it('GitHub 링크가 렌더링되어야 한다', () => {
-    render(<Projects />);
-    
-    const githubLinks = screen.getAllByRole('link', { name: /코드 보기/i });
-    expect(githubLinks).toHaveLength(2);
-    
-    expect(githubLinks[0]).toHaveAttribute(
-      'href',
-      'https://github.com/kimsoonil/hyodoSecretary'
-    );
-    expect(githubLinks[1]).toHaveAttribute(
-      'href',
-      'https://github.com/kimsoonil/MinwonTalk'
-    );
-  });
-
-  it('데모 링크가 렌더링되어야 한다', () => {
-    render(<Projects />);
-    
-    const demoLinks = screen.getAllByRole('link', { name: /데모 보기/i });
-    expect(demoLinks).toHaveLength(2);
-    
-    expect(demoLinks[0]).toHaveAttribute(
-      'href',
-      'https://hyodosecretary.netlify.app/'
-    );
-    expect(demoLinks[1]).toHaveAttribute(
-      'href',
-      'https://minwontalk.netlify.app/'
-    );
-  });
-
-  it('올바른 섹션 id를 가져야 한다', () => {
-    const { container } = render(<Projects />);
-    const section = container.querySelector('#projects');
-    expect(section).toBeInTheDocument();
-  });
-
-  it('외부 링크가 올바른 속성을 가져야 한다', () => {
-    render(<Projects />);
-    
-    const externalLinks = screen.getAllByRole('link');
-    externalLinks.forEach((link) => {
-      if (link.getAttribute('href')?.startsWith('http')) {
-        expect(link).toHaveAttribute('target', '_blank');
-        expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-      }
-    });
+    const demoLink = screen.getByRole("link", { name: /데모 보기/i });
+    expect(demoLink).toHaveAttribute("href", "https://partsfit.co.kr");
+    expect(demoLink).toHaveAttribute("target", "_blank");
+    expect(demoLink).toHaveAttribute("rel", "noopener noreferrer");
   });
 });
-

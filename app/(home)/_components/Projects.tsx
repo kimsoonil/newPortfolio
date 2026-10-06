@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Users } from "lucide-react";
+import { Calendar, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import { PROJECTS } from "@/app/(home)/_constants";
 
@@ -20,7 +20,7 @@ export default function Projects() {
             PROJECTS
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            다양한 도메인에서의 프로젝트 경험을 소개합니다.
+            최근 업무와 지원 직무에 직접 연결되는 프로젝트를 선별했습니다.
           </p>
         </motion.div>
 
@@ -48,18 +48,27 @@ export default function Projects() {
                 )}
               </div>
               <div className="p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-2xl font-semibold leading-tight whitespace-pre-line">
+                <div className="mb-3">
+                  <h3 className="text-2xl font-semibold leading-tight whitespace-pre-line mb-2">
                     {project.title}
                   </h3>
-                  {project.teamSize && (
-                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
-                      <Users className="w-3.5 h-3.5" />
-                      <span className="text-xs font-medium">{project.teamSize}명</span>
-                    </div>
-                  )}
+                  <div className="flex items-center gap-2 text-sm text-foreground/60">
+                    <Calendar className="w-4 h-4" />
+                    <span>{project.period}</span>
+                  </div>
                 </div>
+                <p className="text-sm font-medium text-primary dark:text-primary-light mb-2">
+                  {project.role}
+                </p>
                 <p className="text-foreground/70 mb-4">{project.description}</p>
+                <ul className="space-y-2 mb-5">
+                  {project.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-2 text-sm text-foreground/70">
+                      <span className="text-primary flex-shrink-0">•</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
@@ -104,4 +113,3 @@ export default function Projects() {
     </section>
   );
 }
-

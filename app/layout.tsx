@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://kimsunil-portfolio.netlify.app";
+const siteUrl = "https://kimsunil.netlify.app";
 
 export const metadata: Metadata = {
-  title: "김수닐 | 프론트엔드 개발자 포트폴리오",
+  title: "김순일 | 프론트엔드 개발자 포트폴리오",
   description:
-    "6년 8개월간 커머스·AI·핀테크 등 6개 도메인에서 10개 이상의 서비스를 출시한 프론트엔드 개발자 김수닐의 포트폴리오입니다.",
+    "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자 김순일의 포트폴리오입니다.",
   keywords: [
     "프론트엔드",
     "React",
@@ -26,32 +26,32 @@ export const metadata: Metadata = {
     "TypeScript",
     "포트폴리오",
     "개발자",
-    "김수닐",
-    "프론트엔드 챕터 리더",
+    "김순일",
+    "커머스 프론트엔드",
   ],
-  authors: [{ name: "김수닐", url: "https://github.com/kimsoonil" }],
+  authors: [{ name: "김순일", url: "https://github.com/kimsoonil" }],
   openGraph: {
     type: "website",
     locale: "ko_KR",
     url: siteUrl,
-    siteName: "김수닐 포트폴리오",
-    title: "김수닐 | 프론트엔드 개발자 포트폴리오",
+    siteName: "김순일 포트폴리오",
+    title: "김순일 | 프론트엔드 개발자 포트폴리오",
     description:
-      "6년 8개월간 커머스·AI·핀테크 등 6개 도메인에서 10개 이상의 서비스를 출시한 프론트엔드 개발자 김수닐의 포트폴리오입니다.",
+      "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자 김순일의 포트폴리오입니다.",
     images: [
       {
         url: `${siteUrl}/profile.jpg`,
         width: 1200,
         height: 630,
-        alt: "김수닐 프론트엔드 개발자 포트폴리오",
+        alt: "김순일 프론트엔드 개발자 포트폴리오",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "김수닐 | 프론트엔드 개발자 포트폴리오",
+    title: "김순일 | 프론트엔드 개발자 포트폴리오",
     description:
-      "6년 8개월간 커머스·AI·핀테크 등 6개 도메인에서 10개 이상의 서비스를 출시한 프론트엔드 개발자 김수닐의 포트폴리오입니다.",
+      "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자 김순일의 포트폴리오입니다.",
     images: [`${siteUrl}/profile.jpg`],
     creator: "@kimsoonil",
   },
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "김수닐",
+  name: "김순일",
   alternateName: "Kim Soonil",
   url: siteUrl,
   image: `${siteUrl}/profile.jpg`,
-  jobTitle: "프론트엔드 챕터 리더",
+  jobTitle: "프론트엔드 개발자",
   description:
-    "6년 8개월간 커머스·AI·핀테크 등 6개 도메인에서 10개 이상의 서비스를 출시한 프론트엔드 개발자",
+    "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자",
   email: "rlatnsdlf158@naver.com",
   sameAs: [
     "https://github.com/kimsoonil",
@@ -82,16 +82,13 @@ const jsonLd = {
     "Next.js",
     "TypeScript",
     "Zustand",
-    "React Query",
-    "Tailwind CSS",
+    "Redux Toolkit",
+    "Vitest",
+    "React Testing Library",
     "Flutter",
     "GitHub Actions",
     "CI/CD",
   ],
-  worksFor: {
-    "@type": "Organization",
-    name: "어메스 (Ames)",
-  },
 };
 
 export default function RootLayout({

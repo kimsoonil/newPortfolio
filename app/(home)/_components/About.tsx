@@ -18,9 +18,9 @@ export default function About() {
             ABOUT
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            프론트엔드 챕터를 리딩하며 기술 표준 확립과 팀 역량 강화에 집중해온 리더입니다. 팀의
-            기술 스택 선정과 코드 컨벤션을 주도했고, 다양한 개발 문화를 포용하며 동료들과 건설적인
-            코드 리뷰를 통해 코드 품질을 일관되게 유지했습니다.
+            React·TypeScript·Next.js를 중심으로 커머스, SCM, 관리자 콘솔과 모바일 웹뷰를
+            개발했습니다. 요구사항을 화면과 데이터 흐름으로 구체화하고 구현부터 테스트·배포·운영까지
+            연결하는 데 집중합니다.
           </p>
         </motion.div>
 
@@ -47,4 +47,3 @@ export default function About() {
     </section>
   );
 }
-

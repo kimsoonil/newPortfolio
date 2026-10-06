@@ -2,12 +2,14 @@ import { LucideIcon } from "lucide-react";
 
 export type Project = {
   title: string;
+  period: string;
+  role: string;
   description: string;
+  highlights: string[];
   technologies: string[];
-  image: string;
+  image?: string;
   github?: string;
   demo?: string;
-  teamSize?: number;
 };
 
 export type Experience = {
@@ -38,4 +40,3 @@ export type NavItem = {
   name: string;
   href: string;
 };
-

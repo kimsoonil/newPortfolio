@@ -19,7 +19,7 @@ export default function Career() {
             CAREER
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            다양한 프로젝트와 회사에서의 경험을 소개합니다.
+            공식 경력 정보와 주요 담당 업무를 최근 순으로 정리했습니다.
           </p>
         </motion.div>
 
@@ -70,4 +70,3 @@ export default function Career() {
     </section>
   );
 }
-

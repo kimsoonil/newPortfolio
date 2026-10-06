@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { expect, afterEach, vi } from 'vitest';
+import { afterEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import React from 'react';
 
@@ -10,10 +10,13 @@ afterEach(() => {
 
 // Next.js Image 컴포넌트 모킹
 vi.mock('next/image', () => ({
-  default: (props: any) => {
-    // Next.js Image의 특수 prop들을 필터링
-    const { fill, priority, sizes, ...imgProps } = props;
-    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+  default: (props: React.ImgHTMLAttributes<HTMLImageElement> & {
+    fill?: boolean;
+    priority?: boolean;
+  }) => {
+    const imgProps = { ...props };
+    delete imgProps.fill;
+    delete imgProps.priority;
     return React.createElement('img', imgProps);
   },
 }));
@@ -28,29 +31,36 @@ vi.mock('next/link', () => ({
 // Framer Motion 모킹 (애니메이션 제거하여 테스트 속도 향상)
 // Framer Motion의 특수 prop들을 필터링하여 DOM에 전달되지 않도록 함
 vi.mock('framer-motion', () => {
-  const filterFramerProps = (props: any) => {
-    const {
-      initial,
-      animate,
-      exit,
-      transition,
-      whileHover,
-      whileTap,
-      whileInView,
-      whileFocus,
-      viewport,
-      variants,
-      custom,
-      ...domProps
-    } = props;
-    return domProps;
+  const framerPropNames = new Set([
+    'initial',
+    'animate',
+    'exit',
+    'transition',
+    'whileHover',
+    'whileTap',
+    'whileInView',
+    'whileFocus',
+    'viewport',
+    'variants',
+    'custom',
+  ]);
+
+  const filterFramerProps = (props: Record<string, unknown>) => {
+    return Object.fromEntries(
+      Object.entries(props).filter(([key]) => !framerPropNames.has(key)),
+    );
   };
 
   const createMotionComponent = (tag: string) => {
-    return ({ children, ...props }: any) => {
+    const MotionComponent = ({
+      children,
+      ...props
+    }: React.PropsWithChildren<Record<string, unknown>>) => {
       const filteredProps = filterFramerProps(props);
       return React.createElement(tag, filteredProps, children);
     };
+    MotionComponent.displayName = `MockMotion(${tag})`;
+    return MotionComponent;
   };
 
   return {
@@ -71,4 +81,3 @@ vi.mock('framer-motion', () => {
       React.createElement(React.Fragment, null, children),
   };
 });
-

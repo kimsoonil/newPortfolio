@@ -34,7 +34,7 @@ export default function Hero() {
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/30 dark:border-primary-light/30 shadow-xl shadow-primary/20 dark:shadow-primary-light/20">
                 <Image
                   src="/profile.jpg"
-                  alt="kimsunil"
+                  alt="김순일 프로필"
                   fill
                   className="object-cover"
                   priority
@@ -50,7 +50,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl text-foreground/70 mb-4 max-w-2xl mx-auto"
             >
-              6년 8개월간 10개 이상의 서비스를 출시한 프론트엔드 개발자
+              커머스·SCM·관리자 콘솔을 개발해 온 7년차 프론트엔드 개발자
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg text-foreground/60 mb-8 max-w-2xl mx-auto"
             >
-              커머스, AI, 핀테크 등 6개 도메인을 경험하며 팀의 기술 표준 확립과 생산성 혁신을 주도합니다.
+              사용자 구매 흐름과 운영 업무를 연결하고, 팀이 함께 유지보수할 수 있는 구조를 만듭니다.
             </motion.p>
           </motion.div>
 
@@ -128,4 +128,3 @@ export default function Hero() {
     </section>
   );
 }
-

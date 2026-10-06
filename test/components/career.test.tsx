@@ -1,66 +1,30 @@
-import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import Career from '@/components/career';
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
+import Career from "@/app/(home)/_components/Career";
 
-describe('Career Component', () => {
-  it('경력 섹션 제목이 렌더링되어야 한다', () => {
+describe("Career", () => {
+  it("공식 회사명과 근무 기간을 렌더링한다", () => {
     render(<Career />);
-    expect(screen.getByText('CAREER')).toBeInTheDocument();
-  });
 
-  it('경력 설명이 렌더링되어야 한다', () => {
-    render(<Career />);
+    expect(screen.getByText("CAREER")).toBeInTheDocument();
     expect(
-      screen.getByText('다양한 프로젝트와 회사에서의 경험을 소개합니다.')
+      screen.getByText("공식 경력 정보와 주요 담당 업무를 최근 순으로 정리했습니다."),
     ).toBeInTheDocument();
+    expect(screen.getByText("주식회사 어메스 (AmassCo., Ltd.)")).toBeInTheDocument();
+    expect(screen.getByText("2023.09 - 2026.08")).toBeInTheDocument();
+    expect(screen.getByText("아이디스트 (IDist)")).toBeInTheDocument();
+    expect(screen.getByText("주식회사 내모마켓")).toBeInTheDocument();
   });
 
-  it('모든 경력 경험이 렌더링되어야 한다', () => {
+  it("공식 직책과 법인 변경에 따른 경력 연속성을 설명한다", () => {
     render(<Career />);
-    
-    // 모든 회사명이 렌더링되는지 확인
-    expect(screen.getByText('어메스 (Ames)')).toBeInTheDocument();
-    expect(screen.getByText('아이디어스 (Ideas)')).toBeInTheDocument();
-    expect(screen.getByText('스냅태그 (Snaptag)')).toBeInTheDocument();
-    expect(screen.getByText('포지큐브 (Posicube)')).toBeInTheDocument();
-    expect(screen.getByText('CMESOFT')).toBeInTheDocument();
-  });
 
-  it('직책이 렌더링되어야 한다', () => {
-    render(<Career />);
-    
-    expect(screen.getByText('프론트엔드 챕터 리더')).toBeInTheDocument();
-    expect(screen.getByText('프론트엔드 개발 팀장')).toBeInTheDocument();
-    expect(screen.getAllByText('프론트엔드 개발자')).toHaveLength(3);
-  });
-
-  it('경력 기간이 렌더링되어야 한다', () => {
-    render(<Career />);
-    
-    expect(screen.getByText(/2022\.04 - 2023\.04/)).toBeInTheDocument();
-    expect(screen.getByText(/2021\.11 - 2022\.04/)).toBeInTheDocument();
-    expect(screen.getByText(/2019\.04 - 2020\.11/)).toBeInTheDocument();
-    expect(screen.getByText(/2018\.07 - 2019\.03/)).toBeInTheDocument();
-  });
-
-  it('경력 설명이 렌더링되어야 한다', () => {
-    render(<Career />);
-    
+    expect(screen.getByText("선임연구원 · 프론트엔드 챕터 리딩")).toBeInTheDocument();
+    expect(screen.getAllByText("연구원 · 프론트엔드 개발")).toHaveLength(4);
     expect(
-      screen.getByText(/프론트엔드 챕터 리딩 및 팀의 기술 스택 선정/)
+      screen.getByText(
+        "법인 변경으로 내모마켓과 별도 경력으로 등록됐으나 동일 조직과 구성원 아래 연속 근무",
+      ),
     ).toBeInTheDocument();
-    expect(
-      screen.getByText(/AI 장비 관리 시스템 프론트엔드 개발/)
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(/코인 거래소 실시간 시세\/호가\/거래 기능 개발/)
-    ).toBeInTheDocument();
-  });
-
-  it('올바른 섹션 id를 가져야 한다', () => {
-    const { container } = render(<Career />);
-    const section = container.querySelector('#career');
-    expect(section).toBeInTheDocument();
   });
 });
-
