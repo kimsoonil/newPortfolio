@@ -20,7 +20,7 @@ export default function Projects() {
             PROJECTS
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            최근 업무와 지원 직무에 직접 연결되는 프로젝트를 선별했습니다.
+            직접 기획하고 구현한 개인 프로젝트입니다.
           </p>
         </motion.div>
 
@@ -52,10 +52,10 @@ export default function Projects() {
                   <h3 className="text-2xl font-semibold leading-tight whitespace-pre-line mb-2">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-sm text-foreground/60">
+                  {project.period && <div className="flex items-center gap-2 text-sm text-foreground/60">
                     <Calendar className="w-4 h-4" />
                     <span>{project.period}</span>
-                  </div>
+                  </div>}
                 </div>
                 <p className="text-sm font-medium text-primary dark:text-primary-light mb-2">
                   {project.role}
