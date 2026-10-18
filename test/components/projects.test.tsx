@@ -12,11 +12,12 @@ describe("Projects", () => {
     expect(screen.queryByText("SCM")).not.toBeInTheDocument();
     const demos = screen.getAllByRole("link", { name: /데모 보기/ });
     expect(demos.map(link => link.getAttribute("href"))).toEqual([
-      "https://korean-history-merge-defense.slskdkfdl12.chatgpt.site/",
       "https://minwontalk.netlify.app/", "https://hyodosecretary.netlify.app/",
       "https://petory.netlify.app/", "https://bagknock.netlify.app/",
+      "https://korean-history-merge-defense.slskdkfdl12.chatgpt.site/",
     ]);
     expect(screen.getAllByRole("link", { name: /코드 보기/ })).toHaveLength(4);
+    expect(screen.getAllByRole("heading", { level: 3 }).at(-1)).toHaveTextContent("영웅합전서");
     for (const link of demos) {
       expect(link).toHaveAttribute("target", "_blank");
       expect(link).toHaveAttribute("rel", "noopener noreferrer");

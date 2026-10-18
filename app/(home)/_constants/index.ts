@@ -149,24 +149,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: "영웅합전서",
-    description:
-      "한국사 영웅을 소환·조합해 적의 침공을 방어하는 전략 디펜스 게임입니다. 전투와 성장 UI부터 계정·클라우드 저장, 서버 재화 검증, 운영 어드민과 모바일 앱 패키징까지 구현하며 웹 서비스를 앱 출시 준비 단계로 확장했습니다.",
-    technologies: ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Capacitor", "AdMob"],
-    image: "/hero-chronicle.png",
-    demo: "https://korean-history-merge-defense.slskdkfdl12.chatgpt.site/",
-    role: "개인 프로젝트 · 게임 기획·프론트엔드·서버·어드민 개발",
-    period: "2026.09.17 ~ 현재 · 개발·운영 중",
-    highlights: [
-      "게임: 랜덤 소환·다단계 영웅 조합·스테이지 전투·성장·도감 UI와 게임 규칙 구현",
-      "서버: Supabase 인증·클라우드 저장 및 서버 권위형 재화 처리, 보상형 광고의 서버 검증 연동",
-      "어드민: 관리자 권한 기반 사용자 검색, 계정 재화·거래 이력·구매 상태 조회 화면 구현",
-      "앱: Capacitor 기반 iOS·Android 패키징과 네이티브 광고 연동, 제출용 빌드 및 스토어 자료 준비",
-      "출시 현황: 웹 공개 운영 · Google Play·App Store 출시 준비 중 — 제출용 빌드·스토어 자료 준비",
-      "개발 방식: Codex를 활용한 반복 구현과 자동화 테스트로 게임 규칙·보상 처리 회귀 검증",
-    ],
-  },
-  {
     title: "민원똑똑",
     description:
       "정부 민원 사이트의 복잡한 검색 UI를 개선하는 아이디어 프로젝트입니다. 실제 크롤링 대신 더미 데이터로 AI 자연어 처리 기반 대화형 민원 응답 흐름을 구현하고 UX 개선 방향을 검증했습니다.",
@@ -225,5 +207,23 @@ export const PROJECTS: Project[] = [
     role: "개인 프로젝트 · 1인 개발",
     period: "",
     highlights: [],
+  },
+  {
+    title: "영웅합전서",
+    description:
+      "한국사 영웅을 소환·조합해 적의 침공을 방어하는 전략 디펜스 게임입니다. 전투와 성장 UI부터 계정·클라우드 저장, 서버 재화 검증, 운영 어드민과 모바일 앱 패키징까지 구현하며 웹 서비스를 앱 출시 준비 단계로 확장했습니다.",
+    technologies: ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Capacitor", "AdMob"],
+    image: "/hero-chronicle.png",
+    demo: "https://korean-history-merge-defense.slskdkfdl12.chatgpt.site/",
+    role: "개인 프로젝트 · 게임 기획·프론트엔드·서버·어드민 개발",
+    period: "2026.09.17 ~ 현재 · 개발·운영 중",
+    highlights: [
+      "게임: 랜덤 소환·다단계 영웅 조합·스테이지 전투·성장·도감 UI와 게임 규칙 구현",
+      "서버: Supabase 인증·클라우드 저장 및 서버 권위형 재화 처리, 보상형 광고의 서버 검증 연동",
+      "어드민: 관리자 권한 기반 사용자 검색, 계정 재화·거래 이력·구매 상태 조회 화면 구현",
+      "앱: Capacitor 기반 iOS·Android 패키징과 네이티브 광고 연동, 제출용 빌드 및 스토어 자료 준비",
+      "출시 현황: 웹 공개 운영 · Google Play·App Store 출시 준비 중 — 제출용 빌드·스토어 자료 준비",
+      "개발 방식: Codex를 활용한 반복 구현과 자동화 테스트로 게임 규칙·보상 처리 회귀 검증",
+    ],
   },
 ];
