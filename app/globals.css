@@ -145,3 +145,59 @@ dt { color: #666; } dd { margin: 0; }
 .case-content .measurement-note { margin-top: 24px; font-size: 13px; color: #666; }
 @media(max-width:760px) { .site-header nav { gap: 12px; font-size: 13px; }.wordmark { font-size: 17px; }.work-columns { grid-template-columns:1fr; gap:24px; }.intro { padding:42px 0 55px; }.case-intro {padding-top:40px;} }
 @media print { .site-header nav, .portrait { display:none; }.portfolio {max-width:none;padding:0;}.intro{display:block;padding:20px 0;}.section{padding-bottom:24px;}.project,.career-row{break-inside:avoid;}a{color:inherit;}.case-link{color:#222;background:none;border:1px solid #aaa;} }
+
+/* Reading and navigation refinements */
+body { background:#fff; color:#172329; }
+.portfolio { max-width:1160px; }
+.site-header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.97); padding:18px 0; min-height:76px; }
+.site-header nav { align-items:center; gap:8px; }
+.site-header nav a { padding:8px 12px; min-height:44px; display:flex; align-items:center; text-decoration:none; border-radius:4px; color:#56616a; font-size:14px; }
+.site-header nav a:hover { background:#f0f4f2; color:#234c3a; }
+.site-header nav a[aria-current] { background:#e8f0eb; color:#234c3a; font-weight:700; }
+.skip-link { position:fixed; top:-100px; left:24px; z-index:40; background:#234c3a; color:white; padding:12px 18px; }
+.skip-link:focus { top:10px; }
+.intro { padding:62px 0 70px; grid-template-columns:1fr 210px; gap:52px; }
+.intro h1 { font-size:clamp(34px,3.5vw,46px); letter-spacing:-.055em; }
+.portrait { width:210px; height:255px; border-radius:8px; }
+.intro .text-links a { display:inline-flex; align-items:center; min-height:44px; }
+.intro .text-links a:first-child { padding:8px 16px; background:#234c3a; color:#fff; border-radius:4px; text-decoration:none; }
+.section { scroll-margin-top:104px; border-top-color:#cad2d5; }
+.section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:32px; }
+.section-heading p { max-width:510px; margin:0; }
+.work-overview { background:#f5f7f6; padding:32px; margin-bottom:60px; border:1px solid #e0e6e2; border-radius:8px; }
+.work-overview .section-heading { display:block; }
+.work-overview .section-heading p { margin-top:8px; }
+.project { padding:36px 0 42px; gap:36px; grid-template-columns:46% 1fr; }
+.project-image { display:block; padding:14px; border-radius:8px; background:#eef2f3; transition:background .15s; }
+.project-image:hover { background:#e1e9e6; }
+.project-image img { border-radius:3px; }
+.project h3 a { text-decoration:none; }.project h3 a:hover { text-decoration:underline; }
+.project-kind { font-size:13px; font-weight:600; letter-spacing:.02em; color:#356249; }
+.project-body > p { line-height:1.8; }
+.project-body .project-note { padding-left:12px; border-left:2px solid #c8d7ce; color:#52615b; font-size:14px; }
+.project-body .stack { font-size:14px; }
+.project-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; margin-top:22px; }
+.project-actions .text-links { margin:0; gap:16px; }
+.project-actions a { min-height:44px; display:inline-flex; align-items:center; }
+.case-link { padding:10px 16px; border-radius:4px; }
+.career-row { padding:32px 0; }.career-row li { line-height:1.8; }
+.contact { scroll-margin-top:100px; }.contact .text-links a { min-height:44px; display:inline-flex; align-items:center; }
+.case-page .site-header > a:last-child { min-height:44px; display:flex; align-items:center; font-size:14px; }
+.case-intro { padding:48px 0 32px; }.case-intro .text-links a { min-height:44px; display:inline-flex; align-items:center; }
+.case-cover { border-radius:8px; max-height:480px; }
+.case-reading { display:grid; grid-template-columns:190px minmax(0,1fr); gap:60px; margin-top:48px; align-items:start; }
+.case-toc { position:sticky; top:110px; display:flex; flex-direction:column; gap:2px; border-left:1px solid #d7dfda; padding-left:16px; font-size:14px; }
+.case-toc span { color:#6b7471; padding:0 8px 12px; font-size:13px; }
+.case-toc a { padding:8px; min-height:44px; text-decoration:none; border-radius:4px; }.case-toc a:hover { background:#edf3ef; }
+.case-content { margin:0; max-width:740px; }.case-content section { scroll-margin-top:100px; padding:32px 0; }.case-content section:first-child { padding-top:0; border:0; }
+.case-content p, .case-content li { line-height:1.9; }.case-content .decision {margin:30px 0;}
+.footer-navigation { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 28px; font-size:14px; }.footer-navigation a {min-height:44px;display:flex;align-items:center;}
+@media(max-width:760px) {
+ .portfolio {padding:0 20px;}.site-header {min-height:68px; padding:10px 0;gap:10px;}.site-header nav {gap:0;}.site-header nav a {padding:8px 7px;font-size:13px;}.wordmark {white-space:nowrap;}
+ .intro {grid-template-columns:1fr 92px;gap:12px;padding:36px 0 42px;align-items:start;}.intro>div{grid-column:1/-1;grid-row:2;}.portrait {grid-row:1;grid-column:2;width:72px;height:86px;margin-bottom:6px;}.intro .eyebrow {margin:0 0 14px;}.intro h1{font-size:32px;line-height:1.42;margin-bottom:18px;}.intro-detail{font-size:16px;}.intro .text-links{gap:6px 16px;margin-top:20px;}
+ .work-overview {padding:24px 20px;margin-bottom:42px;}.section-heading{display:block;}.section-heading p{margin-top:10px;}h2{font-size:24px;}
+ .project{grid-template-columns:1fr;gap:22px;}.project-actions{gap:10px 18px;}.project h3{font-size:22px;}.project-image{padding:10px;}
+ .case-reading{display:block;margin-top:28px;}.case-toc{position:static;display:flex;flex-direction:row;flex-wrap:wrap;gap:0 8px;padding:12px 0;border-left:0;border-top:1px solid #d7dfda;border-bottom:1px solid #d7dfda;margin-bottom:30px;}.case-toc span{width:100%;padding:0 8px 6px;}.case-content section{scroll-margin-top:90px;}.case-intro .intro-copy{font-size:18px;}.case-content h2{font-size:23px;}.case-intro h1{font-size:30px;}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+@media print{.site-header{position:static;}.case-toc,.skip-link{display:none;}.case-reading{display:block;}.work-overview{background:white;}.intro{display:block;}.project{break-inside:avoid;}.case-link{background:white;color:#222;}.project-actions a{min-height:0;}}

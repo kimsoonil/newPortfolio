@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionNavigation from "./_components/SectionNavigation";
 import Link from "next/link";
 import { CASE_STUDIES } from "./_constants/case-studies";
 import { EXPERIENCES, PROJECTS } from "./_constants";
@@ -16,8 +17,8 @@ const notes = [
   "영웅 조합 · 전장 · 성장 · Supabase 저장 / 웹에서 플레이 가능",
 ];
 export default function Home() {
-  return <main className="portfolio">
-    <header className="site-header"><a href="#home" className="wordmark">김순일</a><nav aria-label="주 메뉴"><a href="#work">업무 경험</a><a href="#projects">프로젝트</a><a href="#career">경력</a><a href="#contact">연락처</a></nav></header>
+  return <main className="portfolio" id="main-content"><a href="#projects" className="skip-link">프로젝트로 바로 이동</a>
+    <header className="site-header"><a href="#home" className="wordmark">김순일</a><SectionNavigation /></header>
     <section id="home" className="intro">
       <div><p className="eyebrow">프론트엔드 개발자</p><h1>커머스와 운영 도구를 만드는<br />김순일입니다.</h1><p className="intro-copy">React · TypeScript · Next.js</p><p className="intro-detail">주문·배송·재고·반품처럼 여러 단계가 이어지는 업무를 화면으로 옮기는 일을 해왔습니다. 최근에는 개인 프로젝트로 ERP를 만들며 재고 처리와 테스트까지 다루고 있습니다.</p><div className="text-links"><a href="#projects">프로젝트 살펴보기</a><a href="https://github.com/kimsoonil" target="_blank" rel="noreferrer">GitHub</a><a href="https://k-soonil.tistory.com/" target="_blank" rel="noreferrer">기술 블로그</a><a href="mailto:rlatnsdlf158@naver.com">이메일</a></div></div>
       <Image src="/profile.jpg" alt="김순일" width={220} height={270} priority className="portrait" />
@@ -25,8 +26,8 @@ export default function Home() {
     <section id="work" className="section work-overview"><div className="section-heading"><h2>업무에서 다룬 문제</h2><p>커머스·SCM·관리자 콘솔에서 맡았던 개발과 협업 경험입니다.</p></div><div className="work-columns"><div><h3>구매와 운영 흐름</h3><p>자사몰·B2B 커머스의 구매, 배송, 반품·환불·정산 화면과 SCM의 상품·재고·창고·계정 관리를 개발했습니다.</p></div><div><h3>화면 전환과 공통화</h3><p>KeystoneJS·Java/JSP 관리 화면을 React로 전환하고, Turborepo·pnpm 환경에서 공통 UI와 테스트를 다뤘습니다.</p></div><div><h3>개발 기준과 협업</h3><p>프론트엔드 챕터 리딩을 맡아 기술 스택·코드 컨벤션을 논의하고 코드 리뷰와 릴리스 관리에 참여했습니다.</p></div></div><a className="inline-link" href="#career">회사별 담당 업무 보기</a></section>
     <section id="projects" className="section"><div className="section-heading"><h2>개인 프로젝트</h2><p>실행 화면뿐 아니라 문제를 해결한 과정과 검증 내용을 함께 정리했습니다.</p></div>
       <div className="project-list">{PROJECTS.map((p, i) => <article className="project" key={p.title}>
-        <div className="project-image"><Image src={p.image!} alt={`${p.title} 화면`} width={960} height={600} sizes="(max-width: 760px) 100vw, 44vw" /></div>
-        <div className="project-body"><p className="project-kind">{i === 0 ? "ERP · 기능 확장 중" : i === 2 ? "프로토타입" : i === 3 ? "웹 게임" : "기술 실험"}</p><h3>{p.title}</h3><p>{descriptions[i]}</p><p className="project-note">{notes[i]}</p><p className="stack">{p.technologies.join(" · ")}</p><Link className="case-link" href={`/projects/${CASE_STUDIES[i].slug}`}>구현 과정과 검증 보기</Link><div className="text-links">{p.github && <a href={p.github} target="_blank" rel="noreferrer">소스 코드</a>}{p.demo && <a href={i === 0 ? p.demo + "connected" : p.demo} target="_blank" rel="noreferrer">{i === 0 ? "관리 화면 (소유자 전용)" : i === 3 ? "게임 열기" : i === 1 ? "대시보드 열기" : "화면 보기"}</a>}</div></div>
+        <Link className="project-image" href={`/projects/${CASE_STUDIES[i].slug}`} aria-label={`${p.title} 상세 보기`}><Image src={p.image!} alt={`${p.title} 화면`} width={960} height={600} sizes="(max-width: 760px) 100vw, 44vw" /></Link>
+        <div className="project-body"><p className="project-kind">{i === 0 ? "ERP · 기능 확장 중" : i === 2 ? "프로토타입" : i === 3 ? "웹 게임" : "기술 실험"}</p><h3><Link href={`/projects/${CASE_STUDIES[i].slug}`}>{p.title}</Link></h3><p>{descriptions[i]}</p><p className="project-note">{notes[i]}</p><p className="stack">{p.technologies.join(" · ")}</p><div className="project-actions"><Link className="case-link" href={`/projects/${CASE_STUDIES[i].slug}`}>상세 사례 보기</Link><div className="text-links">{p.github && <a href={p.github} target="_blank" rel="noreferrer">소스 코드</a>}{p.demo && <a href={i === 0 ? p.demo + "connected" : p.demo} target="_blank" rel="noreferrer">{i === 0 ? "관리 화면 (소유자 전용)" : i === 3 ? "게임 열기" : i === 1 ? "대시보드 열기" : "화면 보기"}</a>}</div></div></div>
       </article>)}</div>
     </section>
     <section id="career" className="section"><div className="section-heading"><h2>경력</h2><p>회사에서 맡았던 일입니다. 회사 소스와 비공개 자료는 공개하지 않습니다.</p></div><div>{EXPERIENCES.map(e => <article className="career-row" key={e.company}><div><p className="period">{e.period}</p><h3>{e.company}</h3><p className="position">{e.position}</p></div><ul>{e.description.map(d => <li key={d}>{d}</li>)}</ul></article>)}</div></section>
