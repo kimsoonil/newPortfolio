@@ -9,7 +9,7 @@ describe("Hero", () => {
 
     expect(screen.getByText("kimsunil")).toBeInTheDocument();
     expect(
-      screen.getByText("커머스·SCM·관리자 콘솔을 개발해 온 7년차 프론트엔드 개발자"),
+      screen.getByText("커머스·SCM·관리자 콘솔을 개발해 온 프론트엔드 개발자"),
     ).toBeInTheDocument();
     expect(
       screen.getByText(

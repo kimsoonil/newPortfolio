@@ -18,7 +18,7 @@ const siteUrl = "https://kimsunil.netlify.app";
 export const metadata: Metadata = {
   title: "김순일 | 프론트엔드 개발자 포트폴리오",
   description:
-    "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자 김순일의 포트폴리오입니다.",
+    "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 프론트엔드 개발자 김순일의 포트폴리오입니다.",
   keywords: [
     "프론트엔드",
     "React",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "김순일 포트폴리오",
     title: "김순일 | 프론트엔드 개발자 포트폴리오",
     description:
-      "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자 김순일의 포트폴리오입니다.",
+      "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 프론트엔드 개발자 김순일의 포트폴리오입니다.",
     images: [
       {
         url: `${siteUrl}/profile.jpg`,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "김순일 | 프론트엔드 개발자 포트폴리오",
     description:
-      "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자 김순일의 포트폴리오입니다.",
+      "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 프론트엔드 개발자 김순일의 포트폴리오입니다.",
     images: [`${siteUrl}/profile.jpg`],
     creator: "@kimsoonil",
   },
@@ -70,7 +70,7 @@ const jsonLd = {
   image: `${siteUrl}/profile.jpg`,
   jobTitle: "프론트엔드 개발자",
   description:
-    "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 7년차 프론트엔드 개발자",
+    "커머스·SCM·관리자 콘솔과 모바일 웹뷰를 개발해 온 프론트엔드 개발자",
   email: "rlatnsdlf158@naver.com",
   sameAs: [
     "https://github.com/kimsoonil",

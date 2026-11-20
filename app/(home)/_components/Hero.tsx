@@ -50,7 +50,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl text-foreground/70 mb-4 max-w-2xl mx-auto"
             >
-              커머스·SCM·관리자 콘솔을 개발해 온 7년차 프론트엔드 개발자
+              커머스·SCM·관리자 콘솔을 개발해 온 프론트엔드 개발자
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
