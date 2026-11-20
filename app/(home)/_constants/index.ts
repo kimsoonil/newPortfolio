@@ -161,7 +161,7 @@ export const PROJECTS: Project[] = [
     title: "물류 모니터링 대시보드",
     description: "모의 물류 데이터를 Canvas로 시각화하고 차량 선택·상태 표시를 제공하는 개인 기술 검증 프로젝트입니다. 실물류 시스템과 연결되지 않습니다.",
     technologies: ["Next.js", "TypeScript", "Canvas API", "Zustand", "Vitest"],
-    image: "/gscrmd.png", github: "https://github.com/kimsoonil/gscrmd",
+    image: "/gscrmd.png", demo: "https://seoul-logistics-dashboard.slskdkfdl12.chatgpt.site/dashboard/", github: "https://github.com/kimsoonil/gscrmd",
     role: "개인 프로젝트 · 1인 개발", period: "",
     highlights: ["Canvas 색상별 배치 렌더링, 좌표 변환과 거리 제곱 기반 차량 선택", "메인 스레드 청크 처리와 상태 배치 업데이트 · 성능 수치는 측정 후 공개"],
   },
