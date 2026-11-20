@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "transport": "live Supabase Auth + HTTPS REST + PostgreSQL",
+  "atomicCartRollback": true,
+  "partialReturns": true,
+  "overReturnDenied": true,
+  "idempotency": true,
+  "kstDailyAndMonthlyStats": {
+    "gross": "7000",
+    "refunds": "1000",
+    "net": "6000"
+  },
+  "viewerAndTenantIsolation": true,
+  "multiProductRace": {
+    "requests": 48,
+    "accepted": 5,
+    "rejected": 43
+  },
+  "catalog": {
+    "seedRows": 100000,
+    "pageSize": 200,
+    "samples": 20,
+    "medianMs": 35.010707999999795,
+    "p95Ms": 46.74274999999943,
+    "nearEndMs": 37.22541700000056,
+    "namePrefixMatches": 100
+  }
+}
