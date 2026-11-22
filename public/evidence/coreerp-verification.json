@@ -1,14 +1,14 @@
 {
   "project": "CoreERP — ERP·SCM 통합관리",
-  "verifiedAt": "2026-11-22",
+  "verifiedAt": "2026-11-23",
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "a94790689eb6f0eae2ae2ad32dc4b1f187413702",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45034741488",
+  "verifiedCodeCommit": "db43809a445b944e5794b5ff4869060c1425b70a",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45035789487",
   "tests": {
-    "junitMockMvc": 46,
-    "vitest": 17,
+    "junitMockMvc": 52,
+    "vitest": 27,
     "playwright": 4
   },
   "ciJobs": {
@@ -96,5 +96,30 @@
     ],
     "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/testing.md",
     "limitations": "jsdom component tests do not replace browser layout or database transaction tests"
+  },
+  "coverage": {
+    "scope": "Local fresh-DB measurement: Java 21, disposable PostgreSQL 18.7, jsdom; same counters confirmed in CI PostgreSQL 17; Playwright NOT included",
+    "java": {
+      "tool": "JaCoCo 0.8.14",
+      "lineBefore": 82.43,
+      "lineAfter": 84.66,
+      "branchBefore": 71.94,
+      "branchAfter": 77.04,
+      "includes": "All compiled application classes; SQL/XML coverage not measured"
+    },
+    "react": {
+      "tool": "Vitest 4.1.12 V8",
+      "lineBefore": 21.29,
+      "lineAfter": 42.33,
+      "branchBefore": 17.94,
+      "branchAfter": 43.82,
+      "includes": "All src TS/TSX including untested files; excludes tests, test setup and type declarations"
+    },
+    "addedTests": {
+      "java": 6,
+      "react": 10
+    },
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/coverage.md",
+    "remaining": "App routing/session transitions, Inventory, Masters, Reports, Dashboard, Operations, RemoteSelect and Documents creation forms need more component tests"
   }
 }
