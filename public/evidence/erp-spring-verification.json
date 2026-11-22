@@ -1,0 +1,60 @@
+{
+  "project": "Flow Ledger ERP — React / Spring Boot",
+  "verifiedAt": "2026-11-22",
+  "source": {
+    "url": "https://github.com/kimsoonil/flow-ledger",
+    "visibility": "private",
+    "verifiedCodeCommit": "6506a685407794198a75a0f5f8243304d602bb30"
+  },
+  "stack": [
+    "React",
+    "TypeScript",
+    "Java 21",
+    "Spring Boot 3.5.16",
+    "MyBatis 3.0.5",
+    "PostgreSQL",
+    "Spring Security",
+    "Docker",
+    "GitHub Actions"
+  ],
+  "status": {
+    "newVersion": "Implemented and tested; not deployed to production",
+    "existingDeployment": "Next.js / Supabase; owner-only; unchanged",
+    "database": "Independent PostgreSQL; no existing game data migration"
+  },
+  "demoData": {
+    "products": 10000,
+    "shippedOrders": 180,
+    "partialReturns": 12,
+    "scope": "Synthetic data in an explicit demo profile only"
+  },
+  "tests": {
+    "junitMockMvc": 18,
+    "vitest": 2,
+    "playwright": 2,
+    "ciJobs": {
+      "backend": "success",
+      "frontend": "success",
+      "browser": "success",
+      "docker": "success"
+    },
+    "workflowRun": "https://github.com/kimsoonil/flow-ledger/actions/runs/45022068009",
+    "ciDatabase": "PostgreSQL 17",
+    "localDatabase": "Temporary PostgreSQL 18.7"
+  },
+  "concurrency": {
+    "requests": 48,
+    "initialStock": 5,
+    "reserved": 5,
+    "rejected": 43,
+    "duplicateConcurrentRequests": 16,
+    "ordersCreatedForDuplicateRequests": 1,
+    "reversedCartRequests": 20
+  },
+  "limitations": [
+    "Single workspace, not multi-tenant",
+    "No payments, actual refunds, tax/accounting or partial shipping",
+    "Correctness checks are not throughput benchmarks",
+    "Private source and CI links require repository access"
+  ]
+}

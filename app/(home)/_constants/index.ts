@@ -150,12 +150,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const PROJECTS: Project[] = [
   {
     title: "ERP · 재고·주문·매출 통합관리",
-    image: "/flow-ledger.png",
+    image: "/flow-ledger-spring.png",
     demo: "https://flow-ledger-erp.slskdkfdl12.chatgpt.site/",
-    description: "상품·재고 입출고, 주문 예약·출고·취소·반품과 매출 집계를 구현하는 독립 개인 프로젝트입니다. Supabase 인증·DB 연동과 동시 주문 정합성을 검증했으며 웹 데모를 배포했습니다. ERP 사이트는 현재 소유자 접근 전용입니다.",
-    technologies: ["Next.js", "TypeScript", "TanStack Query", "TanStack Table", "Zustand", "PostgreSQL"],
-    role: "개인 프로젝트 · 자체 설계·개발", period: "개발중 · 데모 배포",
-    highlights: ["브라우저 데모: 상품 검색·정렬·페이지 탐색, 재고 예약과 주문 상태 전이", "DB: RBAC·RLS 및 원자적 재고 예약 RPC · 로컬 PostgreSQL 동시 주문 검증"],
+    description: "React·TypeScript와 Java·Spring Boot·MyBatis·PostgreSQL로 상품·재고·다품목 주문·부분 반품·매출 통계를 구현했습니다. Spring Security 권한과 Docker·GitHub Actions 검증을 적용했습니다. 새 버전은 배포 준비 중이며 기존 배포본은 소유자 전용입니다.",
+    technologies: ["React", "TypeScript", "Java", "Spring Boot", "MyBatis", "PostgreSQL", "Spring Security", "Docker", "GitHub Actions"],
+    role: "개인 프로젝트 · 자체 설계·개발", period: "신규 버전 구현·검증 완료 · 운영 배포 준비 중",
+    highlights: ["더미 상품 1만 건·주문 180건·부분 반품 12건", "JUnit 18개·Vitest 2개·Playwright 2개 및 CI 4개 작업 통과"],
   },
   {
     title: "물류 모니터링 대시보드",
