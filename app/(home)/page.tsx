@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CoreErpStack from "./_components/CoreErpStack";
 import SectionNavigation from "./_components/SectionNavigation";
 import Link from "next/link";
 import { CASE_STUDIES } from "./_constants/case-studies";
@@ -27,7 +28,7 @@ export default function Home() {
     <section id="projects" className="section"><div className="section-heading"><h2>개인 프로젝트</h2><p>실행 화면뿐 아니라 문제를 해결한 과정과 검증 내용을 함께 정리했습니다.</p></div>
       <div className="project-list">{PROJECTS.map((p, i) => <article className="project" key={p.title}>
         <Link className="project-image" href={`/projects/${CASE_STUDIES[i].slug}`} aria-label={`${p.title} 상세 보기`}><Image src={p.image!} alt={`${p.title} 화면`} width={960} height={600} sizes="(max-width: 760px) 100vw, 44vw" /></Link>
-        <div className="project-body"><p className="project-kind">{i === 0 ? "ERP·SCM · CoreERP MVP" : i === 2 ? "프로토타입" : i === 3 ? "웹 게임" : "기술 실험"}</p><h3><Link href={`/projects/${CASE_STUDIES[i].slug}`}>{p.title}</Link></h3><p>{descriptions[i]}</p><p className="project-note">{notes[i]}</p><p className="stack">{p.technologies.join(" · ")}</p><div className="project-actions"><Link className="case-link" href={`/projects/${CASE_STUDIES[i].slug}`}>상세 사례 보기</Link><div className="text-links">{p.github && <a href={p.github} target="_blank" rel="noreferrer">{i === 0 ? "공개 GitHub" : "소스 코드"}</a>}{p.demo && <a href={i === 0 ? p.demo + "connected" : p.demo} target="_blank" rel="noreferrer">{i === 0 ? "기존 배포본 (소유자 전용)" : i === 3 ? "게임 열기" : i === 1 ? "대시보드 열기" : "화면 보기"}</a>}</div></div></div>
+        <div className="project-body"><p className="project-kind">{i === 0 ? "ERP·SCM · CoreERP MVP" : i === 2 ? "프로토타입" : i === 3 ? "웹 게임" : "기술 실험"}</p><h3><Link href={`/projects/${CASE_STUDIES[i].slug}`}>{p.title}</Link></h3><p>{descriptions[i]}</p><p className="project-note">{notes[i]}</p>{i === 0 ? <CoreErpStack/> : <p className="stack">{p.technologies.join(" · ")}</p>}<div className="project-actions"><Link className="case-link" href={`/projects/${CASE_STUDIES[i].slug}`}>상세 사례 보기</Link><div className="text-links">{p.github && <a href={p.github} target="_blank" rel="noreferrer">{i === 0 ? "공개 GitHub" : "소스 코드"}</a>}{p.demo && <a href={i === 0 ? p.demo + "connected" : p.demo} target="_blank" rel="noreferrer">{i === 0 ? "기존 배포본 (소유자 전용)" : i === 3 ? "게임 열기" : i === 1 ? "대시보드 열기" : "화면 보기"}</a>}</div></div></div>
       </article>)}</div>
     </section>
     <section id="career" className="section"><div className="section-heading"><h2>경력</h2><p>회사에서 맡았던 일입니다. 회사 소스와 비공개 자료는 공개하지 않습니다.</p></div><div>{EXPERIENCES.map(e => <article className="career-row" key={e.company}><div><p className="period">{e.period}</p><h3>{e.company}</h3><p className="position">{e.position}</p></div><ul>{e.description.map(d => <li key={d}>{d}</li>)}</ul></article>)}</div></section>
