@@ -1,15 +1,15 @@
 {
   "project": "CoreERP — ERP·SCM 통합관리",
   "verifiedAt": "2026-11-22",
-  "status": "MVP implemented and tested; NOT deployed to an external production server",
+  "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "fc160256e0d91bebb88b5eecc296c145c769dc35",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45028700948",
+  "verifiedCodeCommit": "42d1a00e7663c3a9652200dff20d9f521210cf20",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45034121606",
   "tests": {
-    "junitMockMvc": 21,
-    "vitest": 3,
-    "playwright": 3
+    "junitMockMvc": 35,
+    "vitest": 4,
+    "playwright": 4
   },
   "ciJobs": {
     "backend": "success",
@@ -51,15 +51,32 @@
   "screenshots": [
     "/coreerp-shipment.png",
     "/coreerp-sales.png",
-    "/coreerp-mobile.png"
+    "/coreerp-mobile.png",
+    "/coreerp-daily-batch.png"
   ],
   "notImplemented": [
     "External production deployment",
-    "Daily summary batch",
     "Partial shipment",
     "Returns/payments/accounting",
     "Multi-company tenancy",
     "Password reset"
   ],
-  "existingServices": "Existing game database, ERP deployment and original repositories remain unchanged"
+  "existingServices": "Existing game database, ERP deployment and original repositories remain unchanged",
+  "dailyBatch": {
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/daily-batch.md",
+    "integrationTests": 13,
+    "migrationTests": 1,
+    "timezone": "Asia/Seoul",
+    "scheduledByDefault": false,
+    "validated": [
+      "Raw/header/product/customer totals",
+      "Unchanged source SKIPPED",
+      "Concurrent job BATCH_BUSY",
+      "Late cancellation and source changes",
+      "Initial/replacement failure rollback and retry",
+      "Committed snapshot with failed journal recovery",
+      "V900 demo migration preserves source counts",
+      "ADMIN and CSRF"
+    ]
+  }
 }

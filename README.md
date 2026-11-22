@@ -16,7 +16,7 @@
 
 ## 프로젝트 구성
 
-- [CoreERP](https://github.com/kimsoonil/CoreERP): 발주·부분 입고·창고별 재고·판매 예약·출고·취소. 공개 GitHub, 구현 화면 3종, JUnit 21개·Vitest 3개·Playwright 3개 및 CI 5개 작업 결과를 연결합니다. MVP 구현·검증 완료이며 운영 배포 전입니다. Docker 로컬 실행 방법은 CoreERP README에 있습니다.
+- [CoreERP](https://github.com/kimsoonil/CoreERP): 발주·부분 입고·창고별 재고·판매 예약·출고·취소. 공개 GitHub, 구현 화면 4종, JUnit 35개·Vitest 4개·Playwright 4개 및 CI 5개 작업 결과를 연결합니다. MVP와 일별 집계 배치 구현·검증 완료이며 운영 배포 전입니다. Docker 로컬 실행 방법은 CoreERP README에 있습니다.
 - 물류 대시보드: 모의 차량 데이터의 Canvas 시각화와 비동기 갱신 처리. 공개 데모 연결.
 - 민원똑똑: 정적 민원 검색·모의 채팅 프로토타입. 실제 AI·인증·발급 미연동.
 - 영웅합전서: 한국사 영웅 조합 디펜스 웹 게임.
@@ -51,3 +51,5 @@ corepack pnpm exec vitest run
 기존 Netlify 사이트는 GitHub 기본 브랜치 변경으로 배포합니다.
 
 2026-11-22 CoreERP 기준으로 메인 카드와 상세 사례를 갱신했습니다. 기존 `/projects/flow-ledger` URL은 북마크 호환을 위해 유지하며, 이전 배포본으로 오해할 수 있는 데모 링크는 CoreERP 화면에서 제공하지 않습니다.
+
+일별 집계 배치의 중복 실행·동시 실행·실패 재처리 검증과 관리자 화면을 상세 사례에 추가했습니다. 운영 배포 전 상태를 유지합니다.

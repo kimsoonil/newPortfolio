@@ -154,8 +154,8 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/kimsoonil/CoreERP",
     description: "React·TypeScript와 Java·Spring Boot·MyBatis·PostgreSQL로 발주·부분 입고·창고별 재고·판매 예약·출고·취소를 구현했습니다. 4개 역할 권한과 감사 로그를 적용하고, 동시 요청·장애 롤백·SQL 집계를 검증했습니다. MVP 구현 완료, 운영 배포 전입니다.",
     technologies: ["React", "TypeScript", "MUI DataGrid", "Java 21", "Spring Boot", "MyBatis", "PostgreSQL", "Spring Security", "Docker", "Testcontainers", "GitHub Actions"],
-    role: "개인 프로젝트 · 자체 설계·개발", period: "MVP 구현·검증 완료 · 운영 배포 전",
-    highlights: ["발주 승인·부분 입고·창고 재고·판매 예약·출고·취소", "JUnit 21개·Vitest 3개·Playwright 3개 및 CI 5개 작업 통과"],
+    role: "개인 프로젝트 · 자체 설계·개발", period: "MVP·일별 집계 구현·검증 완료 · 운영 배포 전",
+    highlights: ["발주 승인·부분 입고·창고 재고·판매 예약·출고·취소", "JUnit 35개·Vitest 4개·Playwright 4개 및 CI 5개 작업 통과"],
   },
   {
     title: "물류 모니터링 대시보드",
