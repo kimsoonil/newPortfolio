@@ -4,11 +4,11 @@
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "42d1a00e7663c3a9652200dff20d9f521210cf20",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45034121606",
+  "verifiedCodeCommit": "a94790689eb6f0eae2ae2ad32dc4b1f187413702",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45034741488",
   "tests": {
-    "junitMockMvc": 35,
-    "vitest": 4,
+    "junitMockMvc": 46,
+    "vitest": 17,
     "playwright": 4
   },
   "ciJobs": {
@@ -78,5 +78,23 @@
       "V900 demo migration preserves source counts",
       "ADMIN and CSRF"
     ]
+  },
+  "testExpansion": {
+    "javaAdded": 11,
+    "reactAdded": 13,
+    "javaScope": [
+      "KST and leap-year date boundaries",
+      "366-day maximum and rejected inputs",
+      "Scheduler ordering, date deduplication, busy deferral and next-trigger retry"
+    ],
+    "reactScope": [
+      "CSRF lifecycle and session expiration",
+      "Business and non-JSON server errors",
+      "Pending button and duplicate clicks",
+      "SKIPPED notice, failure refresh and retry",
+      "Product/customer detail dialog"
+    ],
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/testing.md",
+    "limitations": "jsdom component tests do not replace browser layout or database transaction tests"
   }
 }
