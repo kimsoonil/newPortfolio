@@ -4,11 +4,11 @@
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "db43809a445b944e5794b5ff4869060c1425b70a",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45035789487",
+  "verifiedCodeCommit": "fdbd0b627e6fdbeec25294e88b925046cc9e6863",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45038283486",
   "tests": {
     "junitMockMvc": 52,
-    "vitest": 27,
+    "vitest": 39,
     "playwright": 4
   },
   "ciJobs": {
@@ -98,7 +98,7 @@
     "limitations": "jsdom component tests do not replace browser layout or database transaction tests"
   },
   "coverage": {
-    "scope": "Local fresh-DB measurement: Java 21, disposable PostgreSQL 18.7, jsdom; same counters confirmed in CI PostgreSQL 17; Playwright NOT included",
+    "scope": "React remeasured locally with Vitest/jsdom; Java 21 fresh-DB PostgreSQL 18.7 measurement retained from prior step; CI uses PostgreSQL 17; Playwright NOT included",
     "java": {
       "tool": "JaCoCo 0.8.14",
       "lineBefore": 82.43,
@@ -110,9 +110,9 @@
     "react": {
       "tool": "Vitest 4.1.12 V8",
       "lineBefore": 21.29,
-      "lineAfter": 42.33,
+      "lineAfter": 74.54,
       "branchBefore": 17.94,
-      "branchAfter": 43.82,
+      "branchAfter": 72.94,
       "includes": "All src TS/TSX including untested files; excludes tests, test setup and type declarations"
     },
     "addedTests": {
@@ -120,6 +120,15 @@
       "react": 10
     },
     "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/coverage.md",
-    "remaining": "App routing/session transitions, Inventory, Masters, Reports, Dashboard, Operations, RemoteSelect and Documents creation forms need more component tests"
+    "remaining": "App routing/session transitions, Documents creation forms and some error branches need more component tests",
+    "react70Goal": {
+      "previousLines": 42.33,
+      "currentLines": 74.54,
+      "covered": 287,
+      "total": 385,
+      "testsAdded": 12,
+      "lineThreshold": 70,
+      "sameSourceScope": true
+    }
   }
 }
