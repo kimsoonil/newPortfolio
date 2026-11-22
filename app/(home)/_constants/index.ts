@@ -149,13 +149,13 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: "ERP · 재고·주문·매출 통합관리",
-    image: "/flow-ledger-spring.png",
-    demo: "https://flow-ledger-erp.slskdkfdl12.chatgpt.site/",
-    description: "React·TypeScript와 Java·Spring Boot·MyBatis·PostgreSQL로 상품·재고·다품목 주문·부분 반품·매출 통계를 구현했습니다. Spring Security 권한과 Docker·GitHub Actions 검증을 적용했습니다. 새 버전은 배포 준비 중이며 기존 배포본은 소유자 전용입니다.",
-    technologies: ["React", "TypeScript", "Java", "Spring Boot", "MyBatis", "PostgreSQL", "Spring Security", "Docker", "GitHub Actions"],
-    role: "개인 프로젝트 · 자체 설계·개발", period: "신규 버전 구현·검증 완료 · 운영 배포 준비 중",
-    highlights: ["더미 상품 1만 건·주문 180건·부분 반품 12건", "JUnit 18개·Vitest 2개·Playwright 2개 및 CI 4개 작업 통과"],
+    title: "CoreERP · ERP·SCM 통합관리",
+    image: "/coreerp-sales.png",
+    github: "https://github.com/kimsoonil/CoreERP",
+    description: "React·TypeScript와 Java·Spring Boot·MyBatis·PostgreSQL로 발주·부분 입고·창고별 재고·판매 예약·출고·취소를 구현했습니다. 4개 역할 권한과 감사 로그를 적용하고, 동시 요청·장애 롤백·SQL 집계를 검증했습니다. MVP 구현 완료, 운영 배포 전입니다.",
+    technologies: ["React", "TypeScript", "MUI DataGrid", "Java 21", "Spring Boot", "MyBatis", "PostgreSQL", "Spring Security", "Docker", "Testcontainers", "GitHub Actions"],
+    role: "개인 프로젝트 · 자체 설계·개발", period: "MVP 구현·검증 완료 · 운영 배포 전",
+    highlights: ["발주 승인·부분 입고·창고 재고·판매 예약·출고·취소", "JUnit 21개·Vitest 3개·Playwright 3개 및 CI 5개 작업 통과"],
   },
   {
     title: "물류 모니터링 대시보드",

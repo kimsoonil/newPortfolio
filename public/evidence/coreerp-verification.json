@@ -1,0 +1,65 @@
+{
+  "project": "CoreERP — ERP·SCM 통합관리",
+  "verifiedAt": "2026-11-22",
+  "status": "MVP implemented and tested; NOT deployed to an external production server",
+  "repository": "https://github.com/kimsoonil/CoreERP",
+  "sourceVisibility": "public",
+  "verifiedCodeCommit": "fc160256e0d91bebb88b5eecc296c145c769dc35",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45028700948",
+  "tests": {
+    "junitMockMvc": 21,
+    "vitest": 3,
+    "playwright": 3
+  },
+  "ciJobs": {
+    "backend": "success",
+    "frontend": "success",
+    "browser": "success",
+    "docker": "success",
+    "sql-performance": "success"
+  },
+  "demoData": {
+    "products": 10000,
+    "warehouses": 3,
+    "suppliers": 20,
+    "customers": 30,
+    "purchaseOrders": 120,
+    "partialReceipts": 12,
+    "salesOrders": 95,
+    "confirmedShipments": 90,
+    "reservedSalesOrders": 5,
+    "scope": "Synthetic seed data; browser tests add disposable transactions"
+  },
+  "concurrency": {
+    "salesRequests": 48,
+    "availableStock": 5,
+    "successfulReservations": 5,
+    "sameOrderShipmentRequests": 24,
+    "shipmentsCreated": 1,
+    "duplicateRequestKeyRequests": 16,
+    "salesOrdersCreatedForDuplicateKey": 1,
+    "reversedItemOrderRequests": 20
+  },
+  "rollback": "Injected database failure on the second receipt/shipment item; entire transaction rollback verified",
+  "sqlPerformance": {
+    "rows": 200000,
+    "warmup": 3,
+    "repeats": 7,
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/sql-performance.md",
+    "scope": "Controlled warm-cache single-query experiment; not a production latency or throughput guarantee"
+  },
+  "screenshots": [
+    "/coreerp-shipment.png",
+    "/coreerp-sales.png",
+    "/coreerp-mobile.png"
+  ],
+  "notImplemented": [
+    "External production deployment",
+    "Daily summary batch",
+    "Partial shipment",
+    "Returns/payments/accounting",
+    "Multi-company tenancy",
+    "Password reset"
+  ],
+  "existingServices": "Existing game database, ERP deployment and original repositories remain unchanged"
+}
