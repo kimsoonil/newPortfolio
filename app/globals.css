@@ -219,3 +219,8 @@ body { background:#fff; color:#172329; }
 .stack-details dl > div + div { margin-top: 12px; }
 .stack-details dt { font-weight: 600; font-size: .875rem; color: #444; }
 .stack-details dd { margin: 4px 0 0; line-height: 1.8; color: #666; font-size: .875rem; overflow-wrap: anywhere; }
+
+/* Fill CoreERP previews with the useful top viewport of the full-page capture. */
+.project-image.project-image--coreerp { padding: 0; overflow: hidden; }
+.project-image--coreerp img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; border-radius: 0; }
+.case-cover.case-cover--coreerp { display: block; width: 100%; height: clamp(240px, 50vw, 600px); max-height: none; object-fit: cover; object-position: center top; }
