@@ -4,11 +4,11 @@
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "05a23185dab4ba173e08d47a9bf288d9aa972cb1",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45334487149",
+  "verifiedCodeCommit": "72e1496e18217a1202df304a626a9fcf171ddb57",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45338960592",
   "tests": {
     "junitMockMvc": 52,
-    "vitest": 53,
+    "vitest": 61,
     "playwright": 4
   },
   "ciJobs": {
@@ -110,9 +110,9 @@
     "react": {
       "tool": "Vitest 4.1.12 V8",
       "lineBefore": 21.29,
-      "lineAfter": 90.64,
+      "lineAfter": 96.62,
       "branchBefore": 17.94,
-      "branchAfter": 84.41,
+      "branchAfter": 91.17,
       "includes": "All src TS/TSX including untested files; excludes tests, test setup and type declarations"
     },
     "addedTests": {
@@ -120,7 +120,7 @@
       "react": 10
     },
     "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/coverage.md",
-    "remaining": "main.tsx bootstrap and some modal, error and batch retry UI branches; App 100% lines does not imply all role combinations or asynchronous races are tested",
+    "remaining": "Some login error, document/inventory modal or search, Operations history cell/period/close lines and branches remain; 100% lines is not proof of all role combinations or async races",
     "react70Goal": {
       "previousLines": 42.33,
       "currentLines": 74.54,
@@ -149,6 +149,31 @@
       "documents": {
         "lines": 90.36,
         "branches": 91.42
+      },
+      "sameSourceScope": true
+    },
+    "react95Goal": {
+      "previousLines": 90.64,
+      "currentLines": 96.62,
+      "covered": 372,
+      "total": 385,
+      "testsAdded": 8,
+      "thresholds": {
+        "lines": 95,
+        "statements": 80,
+        "branches": 80,
+        "functions": 80
+      },
+      "main": {
+        "lines": 100
+      },
+      "dailyBatch": {
+        "lines": 100,
+        "branches": 91.66
+      },
+      "documents": {
+        "lines": 96.38,
+        "branches": 93.33
       },
       "sameSourceScope": true
     }
