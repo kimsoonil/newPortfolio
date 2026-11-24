@@ -1,14 +1,14 @@
 {
   "project": "CoreERP — ERP·SCM 통합관리",
-  "verifiedAt": "2026-11-23",
+  "verifiedAt": "2026-11-24",
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "fdbd0b627e6fdbeec25294e88b925046cc9e6863",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45038283486",
+  "verifiedCodeCommit": "05a23185dab4ba173e08d47a9bf288d9aa972cb1",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45334487149",
   "tests": {
     "junitMockMvc": 52,
-    "vitest": 39,
+    "vitest": 53,
     "playwright": 4
   },
   "ciJobs": {
@@ -110,9 +110,9 @@
     "react": {
       "tool": "Vitest 4.1.12 V8",
       "lineBefore": 21.29,
-      "lineAfter": 74.54,
+      "lineAfter": 90.64,
       "branchBefore": 17.94,
-      "branchAfter": 72.94,
+      "branchAfter": 84.41,
       "includes": "All src TS/TSX including untested files; excludes tests, test setup and type declarations"
     },
     "addedTests": {
@@ -120,7 +120,7 @@
       "react": 10
     },
     "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/coverage.md",
-    "remaining": "App routing/session transitions, Documents creation forms and some error branches need more component tests",
+    "remaining": "main.tsx bootstrap and some modal, error and batch retry UI branches; App 100% lines does not imply all role combinations or asynchronous races are tested",
     "react70Goal": {
       "previousLines": 42.33,
       "currentLines": 74.54,
@@ -128,6 +128,28 @@
       "total": 385,
       "testsAdded": 12,
       "lineThreshold": 70,
+      "sameSourceScope": true
+    },
+    "react80Goal": {
+      "previousLines": 74.54,
+      "currentLines": 90.64,
+      "covered": 349,
+      "total": 385,
+      "testsAdded": 14,
+      "thresholds": {
+        "lines": 80,
+        "statements": 80,
+        "branches": 80,
+        "functions": 80
+      },
+      "app": {
+        "lines": 100,
+        "branches": 95
+      },
+      "documents": {
+        "lines": 90.36,
+        "branches": 91.42
+      },
       "sameSourceScope": true
     }
   }
