@@ -1,13 +1,13 @@
 {
   "project": "CoreERP — ERP·SCM 통합관리",
-  "verifiedAt": "2026-11-24",
+  "verifiedAt": "2026-11-28",
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "72e1496e18217a1202df304a626a9fcf171ddb57",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/45338960592",
+  "verifiedCodeCommit": "2317718b9c824b456087c7b9fcef5983066b26fc",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46029086322",
   "tests": {
-    "junitMockMvc": 52,
+    "junitMockMvc": 53,
     "vitest": 61,
     "playwright": 4
   },
@@ -98,7 +98,7 @@
     "limitations": "jsdom component tests do not replace browser layout or database transaction tests"
   },
   "coverage": {
-    "scope": "React remeasured locally with Vitest/jsdom; Java 21 fresh-DB PostgreSQL 18.7 measurement retained from prior step; CI uses PostgreSQL 17; Playwright NOT included",
+    "scope": "Java 21 fresh disposable PostgreSQL 18.7 and React Vitest/jsdom remeasured locally; CI PostgreSQL 17; Playwright NOT included",
     "java": {
       "tool": "JaCoCo 0.8.14",
       "lineBefore": 82.43,
@@ -177,5 +177,14 @@
       },
       "sameSourceScope": true
     }
+  },
+  "workflowVerification": {
+    "date": "2026-11-28",
+    "race": "Shipment vs reservation cancellation, 12 barrier-started iterations, exactly one success and consistent stock/document/audit",
+    "sales": "Baseline vs confirmed: +3000 amount, +1 shipment, 3 units; cancellation restores baseline",
+    "batch": "KST yesterday raw-vs-summary and duplicate SKIPPED; today intentionally not eligible",
+    "walkthrough": "https://github.com/kimsoonil/CoreERP/blob/main/docs/demo-walkthrough.md",
+    "design": "https://github.com/kimsoonil/CoreERP/blob/main/docs/sql-concurrency.md",
+    "operations": "https://github.com/kimsoonil/CoreERP/blob/main/docs/operations.md"
   }
 }

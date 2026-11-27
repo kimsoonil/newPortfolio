@@ -224,3 +224,15 @@ body { background:#fff; color:#172329; }
 .project-image { padding: 0; overflow: hidden; }
 .project-image img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; border-radius: 0; }
 .case-cover { display: block; width: 100%; height: clamp(240px, 50vw, 600px); max-height: none; object-fit: cover; object-position: center top; }
+
+.case-walkthrough { margin: 4rem 0; padding: 2rem 0; border-top: 1px solid var(--line, #d9e0e5); }
+.case-walkthrough > p { max-width: 80ch; line-height: 1.8; margin: 1.25rem 0; }
+.walkthrough-table { overflow-x: auto; margin: 1.5rem 0; }
+.walkthrough-table table { width: 100%; border-collapse: collapse; text-align: left; font-size: 1rem; }
+.walkthrough-table caption { text-align: left; margin-bottom: .75rem; color: #52616c; }
+.walkthrough-table th, .walkthrough-table td { padding: .9rem 1rem; border-bottom: 1px solid #d9e0e5; }
+.walkthrough-table thead { background: #eef3f6; }
+.walkthrough-table tbody th { font-weight: 500; }
+.case-walkthrough .case-screen-grid { margin: 2rem 0; }
+
+#walkthrough-title { scroll-margin-top: 110px; }
