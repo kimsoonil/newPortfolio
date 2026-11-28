@@ -4,8 +4,8 @@
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "2317718b9c824b456087c7b9fcef5983066b26fc",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46029086322",
+  "verifiedCodeCommit": "1afe3bd85d5f432f370748cfd89bf9732fd71ae2",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46146502601",
   "tests": {
     "junitMockMvc": 53,
     "vitest": 61,
@@ -186,5 +186,128 @@
     "walkthrough": "https://github.com/kimsoonil/CoreERP/blob/main/docs/demo-walkthrough.md",
     "design": "https://github.com/kimsoonil/CoreERP/blob/main/docs/sql-concurrency.md",
     "operations": "https://github.com/kimsoonil/CoreERP/blob/main/docs/operations.md"
+  },
+  "localOperations": {
+    "recordedAt": "2026-11-28T12:47:18.559Z",
+    "readLoad": {
+      "requests": 50317,
+      "concurrency": 12,
+      "seconds": 30.008,
+      "requestsPerSecond": 1676.81,
+      "p50Ms": 6.93,
+      "p95Ms": 12.06,
+      "maxMs": 93.30400000000009,
+      "statuses": {
+        "200": 50317
+      }
+    },
+    "hotStock": {
+      "requests": 100,
+      "concurrency": 16,
+      "seconds": 0.098,
+      "requestsPerSecond": 1023.81,
+      "p50Ms": 6.33,
+      "p95Ms": 55.45,
+      "maxMs": 63.67070800000147,
+      "statuses": {
+        "200": 25,
+        "409": 75
+      },
+      "expectedConflicts": 75,
+      "stockAfter": {
+        "on_hand": 25,
+        "reserved": 25
+      },
+      "negativeStock": false
+    },
+    "duplicateShipment": {
+      "requests": 40,
+      "concurrency": 12,
+      "seconds": 0.028,
+      "requestsPerSecond": 1411.92,
+      "p50Ms": 5.96,
+      "p95Ms": 16.34,
+      "maxMs": 17.103250000000116,
+      "statuses": {
+        "200": 40
+      },
+      "uniqueShipmentIds": 1,
+      "stockAfter": {
+        "on_hand": 24,
+        "reserved": 24
+      }
+    },
+    "connectionFailure": {
+      "injection": "pg_terminate_backend during shipment_items trigger sleep",
+      "firstStatus": 500,
+      "rollback": {
+        "onHand": 10,
+        "reserved": 3,
+        "shipments": 0,
+        "orderStatus": "RESERVED"
+      },
+      "retrySameKeyStatus": 200,
+      "afterRetry": {
+        "on_hand": 7,
+        "reserved": 0
+      },
+      "replaySameShipment": true,
+      "recoveryScenarioMs": 113.79,
+      "limit": "One API DB connection loss; not a PostgreSQL server crash or failover"
+    },
+    "backupRestore": {
+      "method": "pg_dump custom format / pg_restore into NEW database",
+      "clientVersion": "pg_dump (PostgreSQL) 19.0",
+      "backupMs": 82.42,
+      "restoreMs": 143.18,
+      "tableCount": 25,
+      "rowsByTable": {
+        "audit_logs": 35,
+        "customers": 30,
+        "daily_customer_summaries": 1,
+        "daily_product_summaries": 6,
+        "daily_summaries": 1,
+        "daily_summary_runs": 1,
+        "daily_summary_sources": 30,
+        "flyway_schema_history": 4,
+        "goods_receipt_items": 12,
+        "goods_receipts": 12,
+        "inventory": 30002,
+        "products": 10002,
+        "purchase_order_items": 120,
+        "purchase_orders": 120,
+        "requests": 69,
+        "roles": 4,
+        "sales_order_items": 216,
+        "sales_orders": 121,
+        "shipment_items": 182,
+        "shipments": 92,
+        "stock_movements": 30196,
+        "suppliers": 20,
+        "user_roles": 4,
+        "users": 4,
+        "warehouses": 3
+      },
+      "allTableFingerprintsEqual": true,
+      "allSequenceValuesEqual": true,
+      "invalidInventoryRows": 0,
+      "restoredApiLogin": true,
+      "restoredApiSalesEqual": true,
+      "restoredApiProductTotalEqual": true,
+      "flywayStartupSucceeded": true,
+      "limit": "Quiescent logical backup, same host and same PG version; no WAL/PITR, offsite durability or production RTO/RPO validation"
+    },
+    "environment": {
+      "os": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M4",
+      "node": "v24.19.0",
+      "postgres": "18.7",
+      "api": "Java 21 / Spring Boot, pool 12, local HTTP",
+      "scope": "Disposable synthetic coreerp_demo only; NOT production deployment"
+    },
+    "rawEvidence": "https://github.com/kimsoonil/CoreERP/blob/main/docs/evidence/local-operations.json",
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/local-operations.md",
+    "verifiedCodeCommit": "1afe3bd85d5f432f370748cfd89bf9732fd71ae2"
   }
 }
