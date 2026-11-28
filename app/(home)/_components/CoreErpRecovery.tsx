@@ -13,7 +13,7 @@ export default function CoreErpRecovery() {
       <tr><th scope="row">업무 수량 정합성</th><td>주문 예약·출고·취소 {number(s.completedReserveShipCancelCycles)}사이클. 종료 후 현재고 100,000·예약 0, 전체 재고 불변식 위반 0개.</td></tr>
     </tbody></table></div>
     <details className="recovery-minute-details"><summary>분별 부하 결과 보기</summary><div className="walkthrough-table"><table><caption>분 단위 응답 수와 지연 · 마지막 완료 대기 구간은 별도 원본 참고</caption><thead><tr><th>구간</th><th>응답 수</th><th>p95</th><th>p99</th></tr></thead><tbody>{s.perMinute.filter(r => r.minute <= s.configuredMinutes).map(r=><tr key={r.minute}><th scope="row">{r.minute}분</th><td>{number(r.requests)}</td><td>{r.p95Ms}ms</td><td>{r.p99Ms}ms</td></tr>)}</tbody></table></div></details>
-    <p>분별 p95는 1분차 9.00ms에서 15분차 11.69ms로 증가했습니다. 거래·감사 데이터 증가와 같은 호스트의 영향을 이번 실험에서 분리하지 않았으며, 원인 분석은 후속 과제입니다.</p>
+    <p>분별 p95는 1분차 9.00ms에서 15분차 11.69ms로 증가했습니다. 아래에서 업무별 원본·SQL 실행계획을 분석하고 같은 조건으로 개선 후 재측정했습니다. JVM·OS의 전체 기여도 분리는 남아 있습니다.</p>
     <p className="measurement-note">같은 호스트의 PostgreSQL 18.7·Java 21·DB 풀 12개, 응답 후 대기하는 closed-loop 부하입니다. 복구는 이름 있는 WAL 목표 지점과 서비스 프로세스 장애를 검증했습니다. 물리 서버 전원 차단·다중 노드 failover·원격 백업·24시간 부하·운영 RTO/RPO 보장은 포함하지 않습니다. RSS 표본만으로 메모리 누수 여부를 단정하지 않습니다.</p>
     <div className="text-links"><a href={docs+"recovery-soak.md"} target="_blank" rel="noreferrer">복구·지속 부하 절차와 한계</a><a href={docs+"evidence/recovery-soak.json"} target="_blank" rel="noreferrer">분별 결과·자원 표본 JSON</a><a href={docs+"evidence/recovery-soak-samples.csv.gz"} target="_blank" rel="noreferrer">요청별 원본 CSV(gzip)</a></div>
   </section>;

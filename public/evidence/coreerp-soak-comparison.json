@@ -1,0 +1,326 @@
+{
+  "conditionsEqual": true,
+  "conditions": {
+    "configuredMinutes": 15,
+    "sessions": 8,
+    "readWorkers": 6,
+    "writeWorkers": 2,
+    "readThinkTimeMs": 40,
+    "writeCycleThinkTimeMs": 200,
+    "warmupExcluded": 30
+  },
+  "environment": {
+    "os": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4",
+    "node": "v24.19.0",
+    "server": "postgres (PostgreSQL) 18.7",
+    "basebackupClient": "pg_basebackup (PostgreSQL) 19.0",
+    "api": "Java 21, Spring Boot, Hikari maximum 12",
+    "scope": "New temporary loopback-only clusters and owned child APIs; NOT production deployment"
+  },
+  "before": {
+    "all": {
+      "requests": 143481,
+      "p50Ms": 3.46,
+      "p95Ms": 11.23,
+      "p99Ms": 12.13,
+      "maxMs": 74.85
+    },
+    "operations": {
+      "cancelShipment": {
+        "overall": {
+          "requests": 8618,
+          "p50Ms": 2.27,
+          "p95Ms": 3.09,
+          "p99Ms": 3.74,
+          "maxMs": 24.16
+        },
+        "firstMinute": {
+          "requests": 572,
+          "p50Ms": 2.49,
+          "p95Ms": 3.56,
+          "p99Ms": 4.37,
+          "maxMs": 8.36
+        },
+        "lastFullMinute": {
+          "requests": 576,
+          "p50Ms": 2.29,
+          "p95Ms": 2.96,
+          "p99Ms": 3.65,
+          "maxMs": 4.01
+        }
+      },
+      "inventory": {
+        "overall": {
+          "requests": 39209,
+          "p50Ms": 10.16,
+          "p95Ms": 11.95,
+          "p99Ms": 12.76,
+          "maxMs": 74.85
+        },
+        "firstMinute": {
+          "requests": 2680,
+          "p50Ms": 7.78,
+          "p95Ms": 9.8,
+          "p99Ms": 10.75,
+          "maxMs": 17.79
+        },
+        "lastFullMinute": {
+          "requests": 2564,
+          "p50Ms": 10.76,
+          "p95Ms": 12.31,
+          "p99Ms": 13.0,
+          "maxMs": 28.79
+        }
+      },
+      "products": {
+        "overall": {
+          "requests": 39209,
+          "p50Ms": 3.05,
+          "p95Ms": 3.73,
+          "p99Ms": 4.25,
+          "maxMs": 52.44
+        },
+        "firstMinute": {
+          "requests": 2681,
+          "p50Ms": 3.33,
+          "p95Ms": 4.11,
+          "p99Ms": 4.8,
+          "maxMs": 16.41
+        },
+        "lastFullMinute": {
+          "requests": 2564,
+          "p50Ms": 3.16,
+          "p95Ms": 3.82,
+          "p99Ms": 4.21,
+          "maxMs": 22.0
+        }
+      },
+      "reserve": {
+        "overall": {
+          "requests": 8618,
+          "p50Ms": 3.3,
+          "p95Ms": 4.3,
+          "p99Ms": 5.04,
+          "maxMs": 24.21
+        },
+        "firstMinute": {
+          "requests": 572,
+          "p50Ms": 4.0,
+          "p95Ms": 5.21,
+          "p99Ms": 6.35,
+          "maxMs": 24.21
+        },
+        "lastFullMinute": {
+          "requests": 576,
+          "p50Ms": 3.32,
+          "p95Ms": 4.22,
+          "p99Ms": 4.6,
+          "maxMs": 5.07
+        }
+      },
+      "salesReport": {
+        "overall": {
+          "requests": 39209,
+          "p50Ms": 3.76,
+          "p95Ms": 5.95,
+          "p99Ms": 6.58,
+          "maxMs": 44.37
+        },
+        "firstMinute": {
+          "requests": 2680,
+          "p50Ms": 2.44,
+          "p95Ms": 3.34,
+          "p99Ms": 4.79,
+          "maxMs": 15.37
+        },
+        "lastFullMinute": {
+          "requests": 2564,
+          "p50Ms": 5.75,
+          "p95Ms": 6.67,
+          "p99Ms": 7.06,
+          "maxMs": 22.62
+        }
+      },
+      "ship": {
+        "overall": {
+          "requests": 8618,
+          "p50Ms": 2.72,
+          "p95Ms": 4.03,
+          "p99Ms": 4.67,
+          "maxMs": 26.5
+        },
+        "firstMinute": {
+          "requests": 572,
+          "p50Ms": 3.14,
+          "p95Ms": 4.67,
+          "p99Ms": 6.67,
+          "maxMs": 11.62
+        },
+        "lastFullMinute": {
+          "requests": 576,
+          "p50Ms": 2.76,
+          "p95Ms": 4.04,
+          "p99Ms": 4.55,
+          "maxMs": 4.8
+        }
+      }
+    }
+  },
+  "after": {
+    "all": {
+      "requests": 144922,
+      "p50Ms": 4.11,
+      "p95Ms": 7.99,
+      "p99Ms": 9.33,
+      "maxMs": 45.46
+    },
+    "operations": {
+      "cancelShipment": {
+        "overall": {
+          "requests": 8404,
+          "p50Ms": 3.22,
+          "p95Ms": 5.07,
+          "p99Ms": 6.58,
+          "maxMs": 15.03
+        },
+        "firstMinute": {
+          "requests": 562,
+          "p50Ms": 2.9,
+          "p95Ms": 5.17,
+          "p99Ms": 6.88,
+          "maxMs": 15.03
+        },
+        "lastFullMinute": {
+          "requests": 558,
+          "p50Ms": 3.46,
+          "p95Ms": 5.35,
+          "p99Ms": 6.64,
+          "maxMs": 7.4
+        }
+      },
+      "inventory": {
+        "overall": {
+          "requests": 39903,
+          "p50Ms": 5.93,
+          "p95Ms": 8.85,
+          "p99Ms": 9.81,
+          "maxMs": 35.94
+        },
+        "firstMinute": {
+          "requests": 2676,
+          "p50Ms": 4.35,
+          "p95Ms": 7.99,
+          "p99Ms": 9.58,
+          "maxMs": 18.67
+        },
+        "lastFullMinute": {
+          "requests": 2602,
+          "p50Ms": 6.97,
+          "p95Ms": 9.3,
+          "p99Ms": 10.03,
+          "maxMs": 18.13
+        }
+      },
+      "products": {
+        "overall": {
+          "requests": 39904,
+          "p50Ms": 3.62,
+          "p95Ms": 5.89,
+          "p99Ms": 6.88,
+          "maxMs": 30.37
+        },
+        "firstMinute": {
+          "requests": 2676,
+          "p50Ms": 3.46,
+          "p95Ms": 6.58,
+          "p99Ms": 7.71,
+          "maxMs": 16.45
+        },
+        "lastFullMinute": {
+          "requests": 2602,
+          "p50Ms": 4.25,
+          "p95Ms": 5.97,
+          "p99Ms": 6.79,
+          "maxMs": 15.45
+        }
+      },
+      "reserve": {
+        "overall": {
+          "requests": 8404,
+          "p50Ms": 5.81,
+          "p95Ms": 8.57,
+          "p99Ms": 10.44,
+          "maxMs": 45.46
+        },
+        "firstMinute": {
+          "requests": 562,
+          "p50Ms": 5.29,
+          "p95Ms": 9.26,
+          "p99Ms": 11.27,
+          "maxMs": 25.96
+        },
+        "lastFullMinute": {
+          "requests": 558,
+          "p50Ms": 6.33,
+          "p95Ms": 8.76,
+          "p99Ms": 10.3,
+          "maxMs": 16.6
+        }
+      },
+      "salesReport": {
+        "overall": {
+          "requests": 39903,
+          "p50Ms": 3.49,
+          "p95Ms": 5.65,
+          "p99Ms": 6.85,
+          "maxMs": 32.97
+        },
+        "firstMinute": {
+          "requests": 2676,
+          "p50Ms": 3.26,
+          "p95Ms": 6.3,
+          "p99Ms": 8.35,
+          "maxMs": 18.06
+        },
+        "lastFullMinute": {
+          "requests": 2602,
+          "p50Ms": 4.1,
+          "p95Ms": 5.88,
+          "p99Ms": 6.77,
+          "maxMs": 15.13
+        }
+      },
+      "ship": {
+        "overall": {
+          "requests": 8404,
+          "p50Ms": 4.38,
+          "p95Ms": 7.04,
+          "p99Ms": 9.14,
+          "maxMs": 30.53
+        },
+        "firstMinute": {
+          "requests": 562,
+          "p50Ms": 4.0,
+          "p95Ms": 7.07,
+          "p99Ms": 9.77,
+          "maxMs": 19.3
+        },
+        "lastFullMinute": {
+          "requests": 558,
+          "p50Ms": 4.67,
+          "p95Ms": 6.98,
+          "p99Ms": 8.16,
+          "maxMs": 13.44
+        }
+      }
+    }
+  },
+  "overallP95ReductionPct": 28.85,
+  "sourceTraces": {
+    "before": "docs/evidence/recovery-soak.json",
+    "after": "docs/evidence/soak-after/recovery-soak.json"
+  },
+  "limitations": "One chronological run per version on a shared local host; not randomized crossover, confidence interval or production SLA. Paced closed-loop changes completed request/cycle counts."
+}

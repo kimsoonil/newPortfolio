@@ -4,10 +4,10 @@
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "1eeea06da8a60938ec376308b906bb00250b395d",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46148179302",
+  "verifiedCodeCommit": "6aa7e4d569e29578ee44d889297acee39e8eb1d2",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46149494559",
   "tests": {
-    "junitMockMvc": 53,
+    "junitMockMvc": 54,
     "vitest": 61,
     "playwright": 4
   },
@@ -98,13 +98,13 @@
     "limitations": "jsdom component tests do not replace browser layout or database transaction tests"
   },
   "coverage": {
-    "scope": "Java 21 fresh disposable PostgreSQL 18.7 and React Vitest/jsdom remeasured locally; CI PostgreSQL 17; Playwright NOT included",
+    "scope": "Java 21 fresh PostgreSQL 18.7 remeasured after SQL regression test; React previous unchanged-source V8 measurement retained, current CI passed; Playwright NOT included",
     "java": {
       "tool": "JaCoCo 0.8.14",
       "lineBefore": 82.43,
-      "lineAfter": 84.66,
+      "lineAfter": 85.46,
       "branchBefore": 71.94,
-      "branchAfter": 77.04,
+      "branchAfter": 77.55,
       "includes": "All compiled application classes; SQL/XML coverage not measured"
     },
     "react": {
@@ -323,5 +323,20 @@
     "crash": "Entire owned PostgreSQL instance and Java API stopped/restarted; NOT OS or physical host power loss",
     "firstMinuteP95Ms": 9,
     "fifteenthMinuteP95Ms": 11.69
+  },
+  "soakOptimization": {
+    "beforeRequests": 143481,
+    "afterRequests": 144922,
+    "p95BeforeMs": 11.23,
+    "p95AfterMs": 7.99,
+    "p50BeforeMs": 3.46,
+    "p50AfterMs": 4.11,
+    "p95ReductionPct": 28.85,
+    "conditionsEqual": true,
+    "readImprovementWithWriteRegression": true,
+    "afterCycles": 8404,
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/soak-optimization.md",
+    "comparison": "https://github.com/kimsoonil/CoreERP/blob/main/docs/evidence/soak-comparison.json",
+    "remaining": "Per-minute increase remains (7.35 to 8.46ms); API write latency regression not fully isolated; single chronological run per version, no production SLA"
   }
 }
