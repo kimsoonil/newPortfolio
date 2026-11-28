@@ -238,3 +238,7 @@ body { background:#fff; color:#172329; }
 #walkthrough-title { scroll-margin-top: 110px; }
 
 #operations-title { scroll-margin-top: 110px; }
+
+#recovery-title { scroll-margin-top: 110px; }
+.recovery-minute-details { margin: 1.5rem 0; border-top: 1px solid #d9e0e5; border-bottom: 1px solid #d9e0e5; padding: 1rem 0; }
+.recovery-minute-details summary { cursor: pointer; font-size: 1rem; font-weight: 600; }

@@ -4,8 +4,8 @@
   "status": "MVP and daily summary batch implemented and tested; NOT deployed to an external production server",
   "repository": "https://github.com/kimsoonil/CoreERP",
   "sourceVisibility": "public",
-  "verifiedCodeCommit": "1afe3bd85d5f432f370748cfd89bf9732fd71ae2",
-  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46146502601",
+  "verifiedCodeCommit": "1eeea06da8a60938ec376308b906bb00250b395d",
+  "ciRun": "https://github.com/kimsoonil/CoreERP/actions/runs/46148179302",
   "tests": {
     "junitMockMvc": 53,
     "vitest": 61,
@@ -309,5 +309,19 @@
     "rawEvidence": "https://github.com/kimsoonil/CoreERP/blob/main/docs/evidence/local-operations.json",
     "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/local-operations.md",
     "verifiedCodeCommit": "1afe3bd85d5f432f370748cfd89bf9732fd71ae2"
+  },
+  "recoverySoak": {
+    "evidence": "https://github.com/kimsoonil/CoreERP/blob/main/docs/evidence/recovery-soak.json",
+    "documentation": "https://github.com/kimsoonil/CoreERP/blob/main/docs/recovery-soak.md",
+    "requests": 143481,
+    "seconds": 900.191,
+    "sessions": 8,
+    "p95Ms": 11.23,
+    "cycles": 8618,
+    "unexpectedErrors": 0,
+    "pitr": "Named WAL restore point before later committed trade; 25 table fingerprints and API match",
+    "crash": "Entire owned PostgreSQL instance and Java API stopped/restarted; NOT OS or physical host power loss",
+    "firstMinuteP95Ms": 9,
+    "fifteenthMinuteP95Ms": 11.69
   }
 }
